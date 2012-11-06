@@ -1,5 +1,28 @@
 <% wrap_layout :layout do %>
   <article>
-    <%= yield %>
+    <header>
+      <div class="inner">
+        <time>November 06, 2012</time>
+        <h2>Purple Monkey Dishwasher</h2>
+        <p class="subtitle">Candy is dandy, but liquor is quicker.</p>
+      </div>
+    </header>
+    <div class="post">
+      <div id="main" role="main">
+        <%= yield %>
+      </div>
+    </div>
   </article>
+
+  <footer>
+    <div class="top">
+      <a href>Back to top</a>
+    </div>
+    <nav class="content">
+      <a href="#">Previous"</a> / <a href="#">Next</a>
+    </nav>
+    <div class="links">
+      <a href="http://twitter.com/adamburmister">Twitter</a>
+    </div>
+  </footer>
 <% end %>

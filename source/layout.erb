@@ -1,38 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
-    <title>Flog</title>
-    <%= stylesheet_link_tag "main" %>
-  </head>
-  <body>
-    
-    <div id="main" role="main">
-      <%= yield %>
-    </div>
-    
-    <aside>
-      <h2>Recent Articles</h2>
-      <ol>
-        <% blog.articles[0...10].each do |article| %>
-          <li><a href="<%= article.url %>"><%= article.title %></a> <span><%= article.date.strftime('%b %e') %></span></li>
-        <% end %>
-      </ol>
+  <meta charset="utf-8">
+  <title><%= content_for?(:title) ? "#{yield_content :title} | " : '' %>Adam Burmister, Web Superhero in Training</title>
+  <meta name="description" content="Adam Burmister: Entrepreneur, Developer, Designer in London">
+  <meta name="author" content="Adam Burmister, @adamburmister">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+  <%= favicon_tag 'images/favicon.png' %>
+  <%= stylesheet_link_tag "main" %>
+  <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body class="white">
 
-      <h2>Tags</h2>
-      <ol>
-        <% blog.tags.each do |tag, articles| %>
-          <li><a href="<%= tag_path tag %>"><%= tag %> (<%= articles.size %>)</a></li>
-        <% end %>
-      </ol>
+  <nav>
+    <a id="logo" href="/">
+      <h1>Flog</h1>
+    </a>
 
-      <h2>By Year</h2>
-      <ol>
-        <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
-          <li><a href="<%= blog_year_path year %>"><%= year %> (<%= articles.size %>)</a></li>
-        <% end %>
-      </ol>
-    </aside>
-  </body>
+    <ul>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="http://github.com/adamburmister">Code</a></li>
+      <li><a href="/about">Adam</a></li>
+    </ul>
+  </nav>
+
+  <%= yield %>
+
+  <aside>
+    <h2>Recent Articles</h2>
+    <ol>
+      <% blog.articles[0...10].each do |article| %>
+        <li><a href="<%= article.url %>"><%= article.title %></a> <span><%= article.date.strftime('%b %e') %></span></li>
+      <% end %>
+    </ol>
+
+    <h2>Tags</h2>
+    <ol>
+      <% blog.tags.each do |tag, articles| %>
+        <li><a href="<%= tag_path tag %>"><%= tag %> (<%= articles.size %>)</a></li>
+      <% end %>
+    </ol>
+
+    <h2>By Year</h2>
+    <ol>
+      <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
+        <li><a href="<%= blog_year_path year %>"><%= year %> (<%= articles.size %>)</a></li>
+      <% end %>
+    </ol>
+  </aside>
+
+  <%= yield_content :footer_javascript %>
+</body>
 </html>

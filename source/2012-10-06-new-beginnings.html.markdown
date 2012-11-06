@@ -1,4 +1,5 @@
 ---
+layout: article_layout
 title: New Beginnings
 date: 2012-10-06
 tags: work, life
