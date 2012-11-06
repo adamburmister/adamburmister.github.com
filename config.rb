@@ -5,8 +5,8 @@
 # Time.zone = "UTC"
 
 activate :blog do |blog|
-  blog.prefix = "blog"
-  blog.permalink = ":year/:month/:day/:title.html"
+  # blog.prefix = "blog"
+  # blog.permalink = ":year/:month/:day/:title.html"
   # blog.sources = ":year-:month-:day-:title.html"
   # blog.taglink = "tags/:tag.html"
   # blog.layout = "layout"
@@ -20,8 +20,8 @@ activate :blog do |blog|
   blog.tag_template = "tag.html"
   blog.calendar_template = "calendar.html"
 
-  blog.paginate = true
-  blog.per_page = 1
+  # blog.paginate = true
+  # blog.per_page = 1
   # blog.page_link = "page/:num"
 end
 
@@ -76,17 +76,24 @@ activate :automatic_image_sizes
 #   end
 # end
 
+activate :sprockets
+
+activate :syntax
+
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
   activate :minify_css
-  
+
   # Minify Javascript on build
   activate :minify_javascript
   

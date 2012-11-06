@@ -1,0 +1,41 @@
+@import "compass";
+@import "susy";
+@import "lib/pygments/github";
+
+// Settings
+
+$total-columns  : 7;
+$column-width   : 4em;
+$gutter-width   : 1em;
+$grid-padding   : $gutter-width;
+
+$break          : 12;
+
+// Container
+
+.page {
+  @include container($total-columns, $break);
+}
+
+// Layout
+
+@include at-breakpoint($break) {
+  .banner { @include prefix(2,$break); }
+  .pagenav { @include span-columns(2,$break); }
+  .main {
+    $main-columns: 10;
+    @include span-columns($main-columns omega, $break);
+    .content { @include span-columns(7,$main-columns) }
+    .summary { @include span-columns(3 omega, $main-columns) }
+  }
+}
+
+.contentinfo {
+  clear: both;
+  margin: 0 0 - $grid-padding;
+  padding: 0 $grid-padding;
+  @include at-breakpoint($break) {
+    margin: 0;
+    @include pad(2,3,$break);
+  }
+}
