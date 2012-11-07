@@ -2,9 +2,9 @@
   <article>
     <header>
       <div class="inner">
-        <time>November 06, 2012</time>
-        <h2>Purple Monkey Dishwasher</h2>
-        <p class="subtitle">Candy is dandy, but liquor is quicker.</p>
+        <time><%= current_article.date.strftime "%d %B, %Y" %></time>
+        <h2><%= current_article.title %></h2>
+        <p class="subtitle"><%= current_article.data.subtitle %></p>
       </div>
     </header>
     <div class="post">
@@ -19,7 +19,7 @@
       <a href>Back to top</a>
     </div>
     <nav class="content">
-      <a href="#">Previous"</a> / <a href="#">Next</a>
+      <a href="#">Previous</a> / <a href="#">Next</a>
     </nav>
     <div class="links">
       <a href="http://twitter.com/adamburmister">Twitter</a>
