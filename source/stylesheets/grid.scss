@@ -1,0 +1,12 @@
+// The 960gs in ems
+$total-columns: 12;
+$column-width: 4em; // columns are 4em wide
+$gutter-width: 1em; // with 1em gutters
+$grid-padding: 1em; // and 1em padding on the grid container
+
+$container-style: magic;
+$container-width: 60em;
+
+.elastic-960 { 
+  @include container; 
+}

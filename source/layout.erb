@@ -8,12 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
   <%= favicon_tag 'images/favicon.png' %>
-  <%= stylesheet_link_tag "main" %>
+  <%= stylesheet_link_tag "main", "light" %>
   <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body class="<%= current_page.data.scheme || 'light' %>">
 
-  <nav>
+<header class="site">
+  <nav class="elastic-960">
     <a id="logo" href="/">
       <h1>Flog</h1>
     </a>
@@ -25,8 +26,17 @@
     </ul>
   </nav>
 
-  <%= yield %>
+  <div class="mast elastic-960">
+    <time><%= current_article.date.strftime "%d %B, %Y" %></time>
+    <h2><%= current_article.title %></h2>
+    <p class="subtitle"><%= current_article.data.subtitle %></p>
+  </div>
+</header>
 
-  <%= yield_content :footer_javascript %>
+<div id="main">
+  <%= yield %>
+</div>
+
+<%= yield_content :footer_javascript %>
 </body>
 </html>

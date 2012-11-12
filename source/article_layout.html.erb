@@ -1,20 +1,13 @@
 <% wrap_layout :layout do %>
   <article>
-    <header>
-      <div class="inner">
-        <time><%= current_article.date.strftime "%d %B, %Y" %></time>
-        <h2><%= current_article.title %></h2>
-        <p class="subtitle"><%= current_article.data.subtitle %></p>
-      </div>
-    </header>
-    <div class="post">
+    <div class="post elastic-960">
       <section>
         <%= yield %>
       </section>
     </div>
   </article>
 
-  <footer>
+  <footer class="elastic-960">
     <div class="top">
       <a href>Back to top</a>
     </div>

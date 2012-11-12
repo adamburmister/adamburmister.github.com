@@ -1,0 +1,157 @@
+@import "lib/normalize";
+
+* {
+  @include box-sizing(border-box);
+}
+
+// Set the article header to be full height
+html, body, .wrapper {
+  min-height: 100%;
+  height: 100%;
+}
+header.site {
+  height: 95%;
+}
+
+body {
+  overflow-x: hidden;
+  font: $base-font-size/$base-line-height $base-font-family;
+  color: #333;
+  background: #d3d3d3;
+}
+#main, header.site {
+  max-width: 1600px;
+  background: #fff;
+  margin: 0 auto;
+}
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #000;
+  text-rendering: optimizeLegibility;
+}
+p {
+  margin: 0 0 $base-line-height 0;
+}
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+sup {
+  line-height: 0;
+}
+
+// Site wide elements
+header.site {
+  $site-header-padding: $base-line-height * 2;
+  position: relative;
+  
+  background: $color-flog-orange url() no-repeat 50% 0%;
+  background-size: cover;
+
+  // @include at-breakpoint($break-tablet) {
+
+  // }
+
+  a {
+    color: #fff;
+    text-shadow: 0 0 8px rgba(0,0,0,.5);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Lato";
+    font-size: 0.8em;
+    font-weight: 600;
+  }
+
+  nav {
+    $logo-size: 4em;
+    $logo-padding: 0.5em;
+
+    padding-top: $site-header-padding; // space out from the top of the page
+    padding-bottom: $site-header-padding / 2; // space out from the top of the page
+    // height: $site-header-height - ($site-header-padding / 2);
+    // margin-bottom: -$site-header-height - ($site-header-padding * 2) - 1px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+
+    a#logo {
+      h1 {
+        float: left;
+        width: $logo-size;
+        height: $logo-size;
+        line-height: $logo-size;
+        // padding: $logo-padding;
+        // margin-top: -$logo-padding / 2;
+        text-align: center;
+        vertical-align: middle;
+        @include border-radius($logo-size);
+        background: #fff;//url(../images/logo.png) no-repeat 50% 50%;
+        background-size: cover;
+        color: $color-flog-orange;
+        font-size: 1.2em;
+        text-shadow: none;
+        // overflow: hidden;
+        // text-indent: -999em;
+      }
+    }
+
+    ul {
+      float: right;
+      list-style: none;
+      line-height: $logo-size - ($logo-padding * 2);
+
+      li {
+        display: inline-block;
+        margin-left: 1em;
+        &:before {
+          content: '/';
+          color: #fff;
+          margin-right: 1em;
+        }
+        &:first-child {
+          &:before {
+            content: '';
+          }
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  .mast {
+    $article-header-padding: $base-line-height * 3;
+    // min-height: 100%;
+    // height: $article-header-height;
+    padding-top: $article-header-padding;
+    padding-bottom: $article-header-padding;
+
+    > * {
+      display: block;
+      text-align: center;
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+#main {
+  article {
+    .post {
+      padding-top: $base-line-height * 3;
+
+      section {
+        @include squish(2,2);
+
+        .wide {
+          @include pull(3);
+          @include span-columns(18,12);
+          background: red;
+        }
+      }
+    }
+  }  
+}

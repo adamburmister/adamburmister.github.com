@@ -14,3 +14,30 @@ def my_cool_method(message)
   puts message
 end
 ```
+
+
+<div class="wide">This is an example article. You probably want to delete it and write your own articles!</div>
+
+```ruby
+def my_cool_method(message)
+  puts message
+end
+```
+
+
+This is an example article. You probably want to delete it and write your own articles!
+
+```ruby
+def my_cool_method(message)
+  puts message
+end
+```
+
+
+This is an example article. You probably want to delete it and write your own articles!
+
+```ruby
+def my_cool_method(message)
+  puts message
+end
+```
