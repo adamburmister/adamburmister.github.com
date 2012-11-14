@@ -10,17 +10,17 @@ html, body, .wrapper {
   height: 100%;
 }
 header.site {
-  height: 95%;
+  height: 99%;
 }
 
 body {
   overflow-x: hidden;
   font: $base-font-size/$base-line-height $base-font-family;
   color: #333;
-  background: #d3d3d3;
+  background: #ececec;
 }
 #main, header.site {
-  max-width: 1600px;
+  max-width: $site-width-max;
   background: #fff;
   margin: 0 auto;
 }
@@ -49,12 +49,30 @@ header.site {
   $site-header-padding: $base-line-height * 2;
   position: relative;
   
-  background: $color-flog-orange url() no-repeat 50% 0%;
+  background: $color-flog-orange url(http://onwander.com/assets/splash/backgrounds/lost-d7765d3dbde4fc218a79cca4e8ce5e06.jpg) no-repeat 50% 0%;
   background-size: cover;
 
   // @include at-breakpoint($break-tablet) {
 
   // }
+
+  min-height: 44rem;
+
+
+  &:before {
+    $shadow-color: rgba(0,0,0,0.2);
+    content: '';
+    width: 58rem;
+    height: 9.2rem;
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    margin-left: -(58rem/2);
+    z-index: 1;
+    @include border-radius(3px);
+    background-color: $shadow-color;
+    @include box-shadow(0 0 3rem 0.5rem $shadow-color); 
+  }
 
   a {
     color: #fff;
@@ -67,8 +85,10 @@ header.site {
   }
 
   nav {
-    $logo-size: 4em;
-    $logo-padding: 0.5em;
+    $logo-size: 4rem;
+    $logo-padding: 0.5rem;
+
+    @include opacity(0.8);
 
     padding-top: $site-header-padding; // space out from the top of the page
     padding-bottom: $site-header-padding / 2; // space out from the top of the page
@@ -88,13 +108,13 @@ header.site {
         text-align: center;
         vertical-align: middle;
         @include border-radius($logo-size);
-        background: #fff;//url(../images/logo.png) no-repeat 50% 50%;
+        background: url(../images/logo.png) no-repeat 50% 50%;
         background-size: cover;
         color: $color-flog-orange;
-        font-size: 1.2em;
+        font-size: 1.2rem;
         text-shadow: none;
-        // overflow: hidden;
-        // text-indent: -999em;
+        overflow: hidden;
+        text-indent: -999em;
       }
     }
 
@@ -105,11 +125,11 @@ header.site {
 
       li {
         display: inline-block;
-        margin-left: 1em;
+        margin-left: 1rem;
         &:before {
           content: '/';
           color: #fff;
-          margin-right: 1em;
+          margin-right: 1rem;
         }
         &:first-child {
           &:before {
@@ -140,8 +160,14 @@ header.site {
 
 #main {
   article {
+
     .post {
-      padding-top: $base-line-height * 3;
+      position: relative;
+      margin-top: -8rem;
+      background-color: #fff;
+      @include border-radius(3px);
+      padding-top: 5rem;
+      z-index: 2;
 
       section {
         @include squish(2,2);
