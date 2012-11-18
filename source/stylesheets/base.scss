@@ -52,6 +52,7 @@ body {
 header.site {
   $site-header-padding: $base-line-height * 2;
   position: relative;
+  min-height: $base-line-height * 25;
 
   background: $color-flog-orange url(http://onwander.com/assets/splash/backgrounds/lost-d7765d3dbde4fc218a79cca4e8ce5e06.jpg) no-repeat 50% 0%;
   background-size: cover;
@@ -189,6 +190,9 @@ header.site {
 
       h1,h2,h3,h4,h5,h6 {
         color: #222;
+        @include pull(1);
+        margin-top: 3rem;
+        margin-bottom: 2rem;
       }
 
       section {
