@@ -1,4 +1,5 @@
 @import "lib/normalize";
+@import "type";
 
 * {
   @include box-sizing(border-box);
@@ -12,10 +13,13 @@ html, body, .wrapper {
 header.site {
   height: 99%;
 }
-
 body {
   overflow-x: hidden;
-  font: $base-font-size/$base-line-height $base-font-family;
+  font: $base-font-size / $base-line-height $base-font-family;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+
   color: #333;
   background: #ececec;
 }
@@ -24,31 +28,31 @@ body {
   background: #fff;
   margin: 0 auto;
 }
-// Typography
-h1, h2, h3, h4, h5, h6 {
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #000;
-  text-rendering: optimizeLegibility;
-}
-p {
-  margin: 0 0 $base-line-height 0;
-}
-strong {
-  font-weight: bold;
-}
-em {
-  font-style: italic;
-}
-sup {
-  line-height: 0;
-}
+// // Typography
+// h1, h2, h3, h4, h5, h6 {
+//   text-transform: uppercase;
+//   font-weight: 700;
+//   color: #000;
+//   text-rendering: optimizeLegibility;
+// }
+// p {
+//   margin: 0 0 $base-line-height 0;
+// }
+// strong {
+//   font-weight: bold;
+// }
+// em {
+//   font-style: italic;
+// }
+// sup {
+//   line-height: 0;
+// }
 
 // Site wide elements
 header.site {
   $site-header-padding: $base-line-height * 2;
   position: relative;
-  
+
   background: $color-flog-orange url(http://onwander.com/assets/splash/backgrounds/lost-d7765d3dbde4fc218a79cca4e8ce5e06.jpg) no-repeat 50% 0%;
   background-size: cover;
 
@@ -58,20 +62,20 @@ header.site {
 
   min-height: 44rem;
 
-
   &:before {
+    $shadow-width: 61.6rem;
     $shadow-color: rgba(0,0,0,0.2);
     content: '';
-    width: 58rem;
+    width: $shadow-width;
+    margin-left: -($shadow-width/2);
     height: 9.2rem;
     position: absolute;
-    bottom: -1rem;
+    bottom: -1em;
     left: 50%;
-    margin-left: -(58rem/2);
     z-index: 1;
     @include border-radius(3px);
     background-color: $shadow-color;
-    @include box-shadow(0 0 3rem 0.5rem $shadow-color); 
+    @include box-shadow(0 0 3rem 0.5rem $shadow-color);
   }
 
   a {
@@ -147,13 +151,23 @@ header.site {
     // height: $article-header-height;
     padding-top: $article-header-padding;
     padding-bottom: $article-header-padding;
+    font-family: Lato;
+    font-weight: 100;
 
     > * {
       display: block;
       text-align: center;
     }
+    time {
+      font-size: 1.2rem;
+    }
+    h2 {
+      text-transform: uppercase;
+      font-size: 3rem;
+    }
     p {
       margin-bottom: 0;
+      font-size: 1.5rem;
     }
   }
 }
@@ -179,5 +193,5 @@ header.site {
         }
       }
     }
-  }  
+  }
 }
