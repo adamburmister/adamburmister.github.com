@@ -99,7 +99,7 @@ header.site {
     // height: $site-header-height - ($site-header-padding / 2);
     // margin-bottom: -$site-header-height - ($site-header-padding * 2) - 1px;
 
-    border-bottom: 1px solid rgba(255,255,255,0.5);
+    // border-bottom: 1px solid rgba(255,255,255,0.5);
 
     a#logo {
       h1 {
@@ -152,7 +152,7 @@ header.site {
     padding-top: $article-header-padding;
     padding-bottom: $article-header-padding;
     font-family: Lato;
-    font-weight: 100;
+    font-weight: 300;
 
     > * {
       display: block;
@@ -160,12 +160,16 @@ header.site {
     }
     time {
       font-size: 1.2rem;
+      font-weight: 100;
     }
     h2 {
       text-transform: uppercase;
       font-size: 3rem;
+      font-weight: 700;
+      // letter-spacing: 0.1em;
     }
     p {
+      font-style: italic;
       margin-bottom: 0;
       font-size: 1.5rem;
     }
@@ -183,6 +187,10 @@ header.site {
       padding-top: 5rem;
       z-index: 2;
 
+      h1,h2,h3,h4,h5,h6 {
+        color: #222;
+      }
+
       section {
         @include squish(2,2);
 
@@ -192,6 +200,22 @@ header.site {
           background: red;
         }
       }
+    }
+  }
+
+  footer {
+    padding-bottom: $base-line-height * 2;
+    padding-top: $base-line-height;
+    margin-top: $base-line-height;
+    border-top: 1px solid #ccc;
+
+    div.top {
+      @include span-columns(2 omega,12);
+    }
+    nav.content {
+      @include push(2);
+      @include span-columns(8,12);
+      text-align: center;
     }
   }
 }
