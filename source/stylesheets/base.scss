@@ -23,17 +23,23 @@ body {
   color: #333;
   background: #ececec;
 }
-a {
-  color: $color-flog-orange;
-  padding-left: 0.2rem;
-  padding-right: 0.2rem;
-  @include border-radius(2px);
-  &:hover {
-    background-color: $color-flog-orange;
-    color: #fff;
-    text-decoration: none;
+
+// Anchors
+#main {
+  a {
+    color: $color-flog-orange;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    @include border-radius(2px);
+    &:hover {
+      background-color: $color-flog-orange;
+      color: #fff;
+      text-decoration: none;
+    }
   }
 }
+
+
 #main, header.site {
   max-width: $site-width-max;
   background: #fff;
@@ -114,6 +120,7 @@ header.site {
     // border-bottom: 1px solid rgba(255,255,255,0.5);
 
     a#logo {
+      float: left;
       h1 {
         float: left;
         width: $logo-size;
@@ -175,10 +182,9 @@ header.site {
       font-weight: 100;
     }
     h2 {
-      text-transform: uppercase;
+      font-family: $base-font-family;
       font-size: 3rem;
-      font-weight: 700;
-      // letter-spacing: 0.1em;
+      font-weight: 400;
     }
     p {
       font-style: italic;

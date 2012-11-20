@@ -6,7 +6,7 @@ date: 2012-11-13 10:49 +00:00
 tags: business, business model, uk
 ---
 
-Since dipping my toes into the entrepreneurial puddle I've found myself fascinated by business models. A startup, is at it's core, the search for a sustainable business model. The stuff around it - the technology, the value proposition, customer segments - are all just there to support that core search.
+<p class="lead">Since dipping my toes into the entrepreneurial puddle I've found myself fascinated by business models. A startup, is at it's core, the search for a sustainable business model. The stuff around it - the technology, the value proposition, customer segments - are all just there to support that core search.</p>
 
 I'm constantly scanning the world for new business models to inspire me. I love this! The delicate balance of value and money, when plumbed up in such a way, can produce amazing businesses.
 One of the first things I do when inspecting a new product idea is sketch on the whiteboard all the actors involved and map these flows between them, trying to find the equilibirum which brings value and wealth to everyone. It's a fun game.
