@@ -110,8 +110,6 @@ header.site {
     $logo-size: 4rem;
     $logo-padding: 0.5rem;
 
-    @include opacity(0.8);
-
     padding-top: $site-header-padding; // space out from the top of the page
     padding-bottom: $site-header-padding / 2; // space out from the top of the page
     // height: $site-header-height - ($site-header-padding / 2);
@@ -121,6 +119,11 @@ header.site {
 
     a#logo {
       float: left;
+      @include opacity(0.9);
+      &:hover {
+        @include opacity(1);
+      }
+
       h1 {
         float: left;
         width: $logo-size;
@@ -149,17 +152,17 @@ header.site {
       li {
         display: inline-block;
         margin-left: 1rem;
-        &:before {
-          content: '/';
-          color: #fff;
-          margin-right: 1rem;
-        }
-        &:first-child {
-          &:before {
-            content: '';
-          }
-          margin-left: 0;
-        }
+        // &:before {
+        //   content: '/';
+        //   color: #fff;
+        //   margin-right: 1rem;
+        // }
+        // &:first-child {
+        //   &:before {
+        //     content: '';
+        //   }
+        //   margin-left: 0;
+        // }
       }
     }
   }
@@ -218,7 +221,8 @@ header.site {
         .wide {
           @include pull(3);
           @include span-columns(18,12);
-          background: red;
+          margin-top: $base-line-height;
+          margin-bottom: $base-line-height;
         }
       }
     }
