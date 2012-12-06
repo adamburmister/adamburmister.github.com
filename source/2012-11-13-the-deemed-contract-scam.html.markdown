@@ -1,7 +1,7 @@
 ---
 title: The Deemed Contract Business Model
 subtitle: How utility companies charge high rates without signed contracts or consent
-scheme: light
+scheme: dark
 date: 2012-11-13 10:49 +00:00
 tags: business, business model, uk
 ---

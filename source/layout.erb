@@ -11,7 +11,7 @@
   <%= stylesheet_link_tag "main", "light" %>
   <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
-<body class="<%= current_page.data.scheme || 'light' %>">
+<body class="<%= current_page.data.scheme || 'black' %>">
 
 <header class="site">
   <nav class="elastic-960">
@@ -20,7 +20,7 @@
     </a>
 
     <ul>
-      <li><a href="/blog">Blog</a></li>
+      <li><a href="/blog" class="active">Blog</a></li>
       <li><a href="http://github.com/adamburmister">Code</a></li>
       <li><a href="/about">Adam</a></li>
     </ul>
@@ -35,6 +35,10 @@
 
 <div id="main">
   <%= yield %>
+
+  <sidebar>
+    <h3>Kia Ora, I'm Adam Burmister.</h3>
+  </sidebar>
 </div>
 
 <%= yield_content :footer_javascript %>

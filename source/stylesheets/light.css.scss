@@ -1,17 +1,54 @@
-body.light {
-	header.site {
-    color: #923e2b;
+@import '_variables';
 
-    nav {
-      a {
-        color: #fff;
+body {
+  &.black {
+    header.site {
+      color: #111;
+      a.active {
+        border-bottom-color: #111;
       }
     }
-    .mast {
-      font-size: 2em;
-      h2 {
-        color: inherit;
+  }
+
+  &, &.dark {
+    header.site {
+      color: #923e2b;
+      .mast {
+        font-size: 2em;
+        h2 {
+          color: inherit;
+        }
+      }
+      a.active {
+        border-bottom-color: #923e2b;
       }
     }
-	}
+  }
+
+  &.orange {
+    header.site {
+      color: $color-flog-orange;
+      a.active {
+        border-bottom-color: $color-flog-orange;
+      }
+    }
+  }
+
+  &.light {
+    header.site {
+      color: #d0dbcb;
+      a.active {
+        border-bottom-color: #d0dbcb;
+      }
+    }
+  }
+
+  &.white {
+  	header.site {
+      color: #fff;
+      a.active {
+        border-bottom-color: #fff;
+      }
+  	}
+  }
 }

@@ -12,16 +12,19 @@ html, body, .wrapper {
 }
 header.site {
   height: 99%;
+  max-height: 59rem;
 }
 body {
   overflow-x: hidden;
-  font: $base-font-size / $base-line-height $base-font-family;
-  font-family: $base-font-family;
-  font-size: $base-font-size;
+  font: $base-font-size $base-font-family;
   line-height: $base-line-height;
 
   color: #333;
   background: #ececec;
+}
+
+a {
+  @include transition(color .2s);
 }
 
 // Anchors
@@ -71,6 +74,7 @@ header.site {
   position: relative;
   min-height: $base-line-height * 25;
 
+  background-color: #999;
   background: $color-flog-orange url(http://onwander.com/assets/splash/backgrounds/lost-d7765d3dbde4fc218a79cca4e8ce5e06.jpg) no-repeat 50% 0%;
   background-size: cover;
 
@@ -81,14 +85,14 @@ header.site {
   // min-height: 44rem;
 
   &:before {
-    $shadow-width: 61.6rem;
+    $shadow-width: 58em;
     $shadow-color: rgba(0,0,0,0.2);
     content: '';
     width: $shadow-width;
     margin-left: -($shadow-width/2);
-    height: 9.2rem;
+    height: 10em;
     position: absolute;
-    bottom: -1em;
+    bottom: -2em;
     left: 50%;
     z-index: 1;
     @include border-radius(3px);
@@ -97,13 +101,26 @@ header.site {
   }
 
   a {
-    color: #fff;
-    text-shadow: 0 0 8px rgba(0,0,0,.5);
+    color: inherit;
+    // text-shadow: 0 0 8px rgba(0,0,0,.5);
     text-decoration: none;
     text-transform: uppercase;
     font-family: "Lato";
     font-size: 0.8em;
-    font-weight: 600;
+    font-weight: bold;
+
+    display: block;
+    letter-spacing: 0.3em;
+    line-height: $base-line-height;
+    padding: 0 0.2em;
+
+    &:hover {
+      color: #000;
+    }
+
+    &.active {
+      border-bottom: 2px solid;
+    }
   }
 
   nav {
@@ -130,7 +147,7 @@ header.site {
         height: $logo-size;
         line-height: $logo-size;
         // padding: $logo-padding;
-        // margin-top: -$logo-padding / 2;
+        margin-top: $logo-padding;
         text-align: center;
         vertical-align: middle;
         @include border-radius($logo-size);
@@ -151,7 +168,7 @@ header.site {
 
       li {
         display: inline-block;
-        margin-left: 1rem;
+        margin-left: 2rem;
         // &:before {
         //   content: '/';
         //   color: #fff;
@@ -188,10 +205,12 @@ header.site {
       font-family: $base-font-family;
       font-size: 3rem;
       font-weight: 400;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
     }
     p {
       font-style: italic;
-      margin-bottom: 0;
+      margin: 0 0 1rem 0;
       font-size: 1.5rem;
     }
   }
@@ -211,8 +230,6 @@ header.site {
       h1,h2,h3,h4,h5,h6 {
         color: #222;
         @include pull(1);
-        margin-top: 3rem;
-        margin-bottom: 2rem;
       }
 
       section {
@@ -233,6 +250,7 @@ header.site {
     padding-top: $base-line-height;
     margin-top: $base-line-height;
     border-top: 1px solid #ccc;
+    font-family: "Lato", "Helvetica", sans-serif;
 
     div.top {
       @include span-columns(2 omega,12);
