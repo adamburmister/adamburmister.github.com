@@ -62,14 +62,14 @@ h6 {
 }
 
 p {
-  margin-bottom: $base-line-height;
+  margin-bottom: 2rem;
   // font-family: 'Lato', sans-serif;
 
   &.lead {
     // font-weight: 700;
     // font-family: 'Lato', sans-serif;
     font-size: 1.2rem;
-    margin-bottom: $base-line-height * 1.5;
+    margin-bottom: 3rem;
     // font-family: $base-font-family;
 
     &:first-child:first-letter {
@@ -78,8 +78,8 @@ p {
       // color: $color-flog-orange;
       color: #000;
       font-size: 5rem;
-      line-height: $base-line-height * 3;
-      // padding-right: 0.5rem;
+      line-height: 5.5rem;
+      padding-right: 0.2rem;
     }
   }
 }
