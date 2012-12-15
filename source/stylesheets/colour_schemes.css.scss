@@ -5,13 +5,14 @@ body {
     header.site {
       color: #111;
       a.active {
-        border-bottom-color: #111;
+        border-color: #111;
       }
     }
   }
 
   &, &.dark {
     header.site {
+      background-color: $color-flog-gray;
       color: #923e2b;
       .mast {
         font-size: 2em;
@@ -20,7 +21,7 @@ body {
         }
       }
       a.active {
-        border-bottom-color: #923e2b;
+        border-color: $color-flog-orange;
       }
     }
   }
@@ -29,7 +30,7 @@ body {
     header.site {
       color: $color-flog-orange;
       a.active {
-        border-bottom-color: $color-flog-orange;
+        border-color: $color-flog-orange;
       }
     }
   }
@@ -38,7 +39,7 @@ body {
     header.site {
       color: #d0dbcb;
       a.active {
-        border-bottom-color: #d0dbcb;
+        border-color: #d0dbcb;
       }
     }
   }
@@ -47,7 +48,7 @@ body {
   	header.site {
       color: #fff;
       a.active {
-        border-bottom-color: #fff;
+        border-color: #fff;
       }
   	}
   }

@@ -101,7 +101,9 @@ header.site {
   }
 
   a {
-    color: inherit;
+    // color: inherit;
+    color: $color-flog-orange;
+
     // text-shadow: 0 0 8px rgba(0,0,0,.5);
     text-decoration: none;
     text-transform: uppercase;
@@ -118,9 +120,9 @@ header.site {
       color: #000;
     }
 
-    &.active {
-      border-bottom: 2px solid;
-    }
+    // &.active {
+    //   border-bottom: 2px solid;
+    // }
   }
 
   nav {
@@ -136,39 +138,48 @@ header.site {
 
     a#logo {
       float: left;
-      @include opacity(0.9);
-      &:hover {
-        @include opacity(1);
-      }
+
+      // @include opacity(0.9);
+      // &:hover {
+      //   @include opacity(0.99);
+      // }
 
       h1 {
+        font-family: "Cassannet Bold";
+
         float: left;
         width: $logo-size;
         height: $logo-size;
         line-height: $logo-size;
-        // padding: $logo-padding;
+        // // padding: $logo-padding;
         margin-top: $logo-padding;
+        margin-bottom: 0;
         text-align: center;
         vertical-align: middle;
         @include border-radius($logo-size);
-        background: url(../images/logo.png) no-repeat 50% 50%;
-        background-size: cover;
-        color: $color-flog-orange;
-        font-size: 1.2rem;
-        text-shadow: none;
-        overflow: hidden;
-        text-indent: -999em;
+        // background: url(../images/logo.png) no-repeat 50% 50%;
+        // background-size: cover;
+        background-color: $color-flog-orange;
+        color: #fff;
+        font-size: 1rem;
+        letter-spacing: 0.05em;
+
+        text-shadow: 0 0 1px $color-flog-orange;
+
+        // overflow: hidden;
+        // text-indent: -999em;
       }
     }
 
     ul {
       float: right;
       list-style: none;
-      line-height: $logo-size - ($logo-padding * 2);
+      margin-top: 12px;
+      // line-height: $logo-size - ($logo-padding * 2);
 
       li {
         display: inline-block;
-        margin-left: 2rem;
+        // margin-left: 2rem;
         // &:before {
         //   content: '/';
         //   color: #fff;
@@ -180,6 +191,17 @@ header.site {
         //   }
         //   margin-left: 0;
         // }
+
+        a {
+          line-height: 3rem;
+          padding: 0 3rem;
+          border: 3px solid transparent;
+
+          &.active {
+            color: $color-flog-orange;
+            // border-color: $color-flog-orange;
+          }
+        }
       }
     }
   }
@@ -249,7 +271,7 @@ header.site {
     padding-bottom: 3rem;
     padding-top: 1rem;
     margin-top: 1rem;;
-    border-top: 1px solid #ccc;
+    border-top: 2px solid #eee;
     font-family: "Lato", "Helvetica", sans-serif;
 
     div.top {
@@ -259,6 +281,33 @@ header.site {
       @include push(2);
       @include span-columns(8,12);
       text-align: center;
+    }
+  }
+
+  aside {
+    margin-top: 3rem;
+    border-top: 3px solid #eee;
+    padding: 1rem 8rem;
+    color: #777;
+    font-family: "Lato";
+    // line-height: 1.25;
+    h3 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: $color-flog-blue;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+    img.headshot {
+      position: absolute;
+      margin-left: -7rem;
+      margin-top: 2rem;
+      width: 5rem;
+      height: 5rem;
+      @include border-radius(10rem);
+      background: url(/images/headshot.jpg) no-repeat;
+      @include box-shadow(0 0 5px rgba(0, 0, 0, .2));
     }
   }
 }
