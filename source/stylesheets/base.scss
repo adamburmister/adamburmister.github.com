@@ -194,13 +194,20 @@ header.site {
 
         a {
           line-height: 3rem;
-          padding: 0 3rem;
+          padding: 0 2rem;
           border: 3px solid transparent;
 
           &.active {
             color: $color-flog-orange;
+            padding: 0 3rem;
             // border-color: $color-flog-orange;
           }
+        }
+
+      }
+      li:last-child {
+        a {
+          padding-left: 1rem;
         }
       }
     }
