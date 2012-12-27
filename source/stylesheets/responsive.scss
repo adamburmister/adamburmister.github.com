@@ -1,0 +1,84 @@
+@include at-breakpoint(0 640px) {
+  body {
+    font-size: 14px;
+  }
+  header.site {
+    nav {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+
+      a#logo {
+        float: none;
+        h1 {
+          float: none;
+          margin: 0 auto;
+        }
+      }
+
+      ul {
+        float: none;
+        clear: both;
+
+        li {
+          float: none;
+          display: block;
+          margin: 0 0 1px 0;
+
+          a, a.active {
+            padding: 0 1rem;
+            border: 0;
+            background-color: $color-flog-orange;
+            color: #fff;
+          }
+          a.active {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .mast {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+  #main article .post {
+    @include pull(0);
+
+    section {
+      @include span-columns(12);
+      @include squish(0,0);
+      margin-left: 0;
+      margin-right: 0;
+
+      .wide {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 1em;
+      @include span-columns(12);
+    }
+    p {
+      &.lead {
+        &:first-child:first-letter {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+// @include layout(6) {
+//   .site nav {
+//     background-color: #f00;
+//   }
+// }
+
+@include at-breakpoint(0 320px) {
+  body {
+    font-size: 12px;
+  }
+}

@@ -14,8 +14,8 @@ h6 {
   font-weight: 500;
   line-height: 1.25;
   margin: 0;
-  margin-top: 4rem;
-  margin-bottom: 2rem;
+  margin-top: 3em;
+  margin-bottom: 1em;
 }
 
 h1 a,
@@ -35,7 +35,8 @@ h1 {
 
 h2 {
   // margin-bottom: 10px;
-  font-size: 35px;
+  // font-size: 35px;
+  font-size: 3em;
   // line-height: 40px;
 }
 
@@ -43,7 +44,8 @@ h3 {
   // margin-top: 4em;
   // margin-bottom: 1.4rem;
   // margin-bottom: 8px;
-  font-size: 28px;
+  // font-size: 28px;
+  font-size: 1.8em;
   // line-height: 34px;
   // line-height: $base-line-height * 1.5;
   // line-height: 1.4;
@@ -66,13 +68,13 @@ h6 {
 }
 
 p {
-  margin-bottom: 2rem;
+  margin-bottom: 2em;
   // font-family: 'Lato', sans-serif;
 
   &.lead {
     // font-weight: 700;
     // font-family: 'Lato', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.2em;
     margin-bottom: 3rem;
     // font-family: $base-font-family;
 

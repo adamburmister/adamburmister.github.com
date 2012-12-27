@@ -88,12 +88,12 @@ header.site {
     $shadow-width: 58em;
     $shadow-color: rgba(0,0,0,0.2);
     content: '';
-    width: $shadow-width;
-    margin-left: -($shadow-width/2);
+    width: 70%;
+    // margin-left: -($shadow-width/2);
     height: 10em;
     position: absolute;
     bottom: -2em;
-    left: 50%;
+    left: 0;
     z-index: 1;
     @include border-radius(3px);
     background-color: $shadow-color;
@@ -179,6 +179,7 @@ header.site {
 
       li {
         display: inline-block;
+
         // margin-left: 2rem;
         // &:before {
         //   content: '/';
@@ -252,9 +253,15 @@ header.site {
 }
 
 #main {
+
   article {
+    // @include container;
 
     .post {
+      float: left;
+      width: 70%;
+      margin: 0;
+      // @include span-columns(8,12);
       position: relative;
       margin-top: -8rem;
       background-color: #fff;
@@ -268,19 +275,38 @@ header.site {
       }
 
       section {
-        @include squish(2,2);
+        @include squish(1,1);
+        // @include span-columns(8 omega, 12);
+        max-width: $column-width * 10;
+        // padding: 0 $column-width;
+        float: right;
 
         .wide {
-          @include pull(3);
-          @include span-columns(18,12);
+          // @include pull(3);
+          // @include span-columns(18,12);
           margin-top: 2rem;
           margin-bottom: 2rem;
         }
       }
     }
+
+    .sidebar {
+      width: 30%;
+      float: left;
+      // background-color: blue;
+      aside {
+        float: left;
+        // @include span-columns(4 omega,12);
+        width: $column-width * 3;
+        // padding: 0 $column-width / 2;
+        @include squish(1,1);
+        background-color: white;
+      }
+    }
   }
 
   footer {
+    clear: both;
     padding-bottom: 3rem;
     padding-top: 1rem;
     margin-top: 1rem;;
@@ -291,33 +317,37 @@ header.site {
       @include span-columns(2 omega,12);
     }
     nav.content {
-      @include push(2);
-      @include span-columns(8,12);
+      // @include push(2);
+      // @include span-columns(8,12);
       text-align: center;
     }
   }
 
   aside {
-    border-top: 3px solid #eee;
-    padding: 3rem 10rem 5rem;
-    color: #777780;
+    // border-top: 3px solid #eee;
+    color: #99A;
     font-family: "Lato";
+    font-size: 0.9rem;
     // line-height: 1.25;
+
     h3 {
       font-family: inherit;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: bold;
       color: $color-flog-blue;
+      margin-top: 5em;
     }
     p {
       margin-bottom: 1rem;
+      // text-align: justify;
     }
     img.headshot {
       position: absolute;
-      margin-left: -7rem;
-      margin-top: 2rem;
-      width: 5rem;
-      height: 5rem;
+      // margin-left: -7em;
+      margin-top: -4rem;
+      margin-left: 1rem;
+      width: 8rem;
+      height: 8rem;
       @include border-radius(10rem);
       background: url(/images/headshot.jpg) no-repeat;
       @include box-shadow(0 0 5px rgba(0, 0, 0, .2));
