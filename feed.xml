@@ -5,7 +5,7 @@
   <id>http://www.flog.co.nz/</id>
   <link href="http://www.flog.co.nz/"/>
   <link href="http://www.flog.co.nz/feed.xml" rel="self"/>
-  <updated>2012-11-13T10:49:00Z</updated>
+  <updated>2012-11-13T00:00:00Z</updated>
   <author>
     <name>Adam Burmister, @adamburmister</name>
   </author>
@@ -13,8 +13,8 @@
     <title>The Deemed Contract Business Model</title>
     <link rel="alternate" href="/2012/11/13/the-deemed-contract-scam.html"/>
     <id>/2012/11/13/the-deemed-contract-scam.html</id>
-    <published>2012-11-13T10:49:00Z</published>
-    <updated>2012-11-13T10:49:00Z</updated>
+    <published>2012-11-13T00:00:00Z</published>
+    <updated>2012-11-13T00:00:00Z</updated>
     <author>
       <name>Adam Burmister, @adamburmister</name>
     </author>
@@ -47,38 +47,28 @@ I&amp;#39;ve recently come across an interesting one in the real world, which I&
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;my_cool_method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
   &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt;
 &lt;span class="k"&gt;end&lt;/span&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-
+&lt;/pre&gt;&lt;/div&gt;
 &lt;div class="wide"&gt;This is an example article. You probably want to delete it and write your own articles!&lt;/div&gt;
 </summary>
     <content type="html">&lt;p&gt;This is an example article. You probably want to delete it and write your own articles!&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;my_cool_method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
   &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt;
 &lt;span class="k"&gt;end&lt;/span&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-
+&lt;/pre&gt;&lt;/div&gt;
 &lt;div class="wide"&gt;This is an example article. You probably want to delete it and write your own articles!&lt;/div&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;my_cool_method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
   &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt;
 &lt;span class="k"&gt;end&lt;/span&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;This is an example article. You probably want to delete it and write your own articles!&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;my_cool_method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
   &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt;
 &lt;span class="k"&gt;end&lt;/span&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;This is an example article. You probably want to delete it and write your own articles!&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;my_cool_method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
   &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt;
 &lt;span class="k"&gt;end&lt;/span&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-</content>
+&lt;/pre&gt;&lt;/div&gt;</content>
   </entry>
 </feed>
