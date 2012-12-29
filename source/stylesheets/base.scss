@@ -2,7 +2,7 @@
 @import "type";
 
 $shadow-width: 75%;
-$shadow-color: rgba(0,0,0,0.1);
+$shadow-color: rgba(0,0,0,0.2);
 
 * {
   @include box-sizing(border-box);
@@ -48,7 +48,7 @@ a {
 
 #main, header.site {
   max-width: $site-width-max;
-  background: #fff;
+  // background: #fff;
   margin: 0 auto;
 }
 // // Typography
@@ -80,6 +80,7 @@ header.site {
   background-color: #999;
   background: $color-flog-orange url(http://onwander.com/assets/splash/backgrounds/lost-d7765d3dbde4fc218a79cca4e8ce5e06.jpg) no-repeat 50% 0%;
   background-size: cover;
+  @include box-shadow(0 0 10px rgba(255,255,255,0.2));
 
   // @include at-breakpoint($break-tablet) {
 
@@ -91,14 +92,14 @@ header.site {
     content: '';
     width: $shadow-width;
     // margin-left: -($shadow-width/2);
-    height: 12rem;
+    height: 20rem;
     position: absolute;
-    bottom: -3.8rem;
+    bottom: -11.9rem;
     left: 0;
     z-index: 1;
     @include border-radius(3px);
     background-color: $shadow-color;
-    @include box-shadow(0 0 3rem 0.5rem $shadow-color);
+    @include box-shadow(-1rem 0 3rem 0.5rem $shadow-color);
   }
 
   a {
@@ -254,20 +255,28 @@ header.site {
 }
 
 #main {
+  // background-image: url(http://subtlepatterns.com/patterns/redox_01.png);
+  // background-image: url(http://subtlepatterns.com/patterns/daimond_eyes.png);
+  // background: #fff url(http://subtlepatterns.com/patterns/stacked_circles.png);
+  // background: url(http://subtlepatterns.com/patterns/pineapplecut.png);
+  background: url(http://subtlepatterns.com/patterns/small-crackle-bright.png);
 
   article {
+    width: 100%;
+
     // @include container;
 
     .post {
       float: left;
       width: $shadow-width;
+      @include box-shadow(0 -0.4em 0.5rem rgba(0,0,0,0.1));
       margin: 0;
       // @include span-columns(8,12);
       position: relative;
       margin-top: -8rem;
       background-color: #fff;
       @include border-radius(3px);
-      padding-top: 5rem;
+      padding: 5rem 0;
       z-index: 2;
 
       h1,h2,h3,h4,h5,h6 {
@@ -296,26 +305,51 @@ header.site {
       float: left;
       // background-color: blue;
       // @include box-shadow(inset 0 0 3rem 0.5rem $shadow-color);
-      border-left: 1px solid #eee;
+      // border-left: 1px solid #eee;
       position: relative;
       padding: 2rem 0;
 
-      &:after {
-        content: ' ';
-        @include background-image(linear-gradient(#eee, white));
-        width: 2px;
-        height: 100px;
-        position: absolute;
-        left: -2px;
-        bottom: 0;
-      }
+      // &:after {
+      //   content: ' ';
+      //   @include background-image(linear-gradient(#eee, white));
+      //   width: 2px;
+      //   height: 20rem;
+      //   position: absolute;
+      //   left: -2px;
+      //   bottom: 0;
+      // }
 
       aside {
         float: left;
-        // @include span-columns(4 omega,12);
         max-width: $column-width * 3.5;
-        // padding: 0 $column-width / 2;
+        min-width: $column-width * 2.5;
         @include squish(1,1);
+        color: #999;
+        font-family: "Lato";
+        font-size: 0.9rem;
+
+        h3 {
+          font-family: inherit;
+          font-size: 1.1rem;
+          font-weight: bold;
+          color: $color-flog-blue;
+          margin-top: 3em;
+        }
+        p {
+          margin-bottom: 1rem;
+          // text-align: justify;
+        }
+        img.headshot {
+          position: absolute;
+          // margin-left: -7em;
+          margin-top: -6rem;
+          // margin-left: 1rem;
+          width: 8rem;
+          height: 8rem;
+          @include border-radius(10rem);
+          background: url(/images/headshot.jpg) no-repeat;
+          @include box-shadow(0 -10px 15px rgba(0, 0, 0, .2), 0 0 5px rgba(0, 0, 0, .2));
+        }
       }
     }
   }
@@ -335,37 +369,6 @@ header.site {
       // @include push(2);
       // @include span-columns(8,12);
       text-align: center;
-    }
-  }
-
-  aside {
-    // border-top: 3px solid #eee;
-    color: #99A;
-    font-family: "Lato";
-    font-size: 0.9rem;
-    // line-height: 1.25;
-
-    h3 {
-      font-family: inherit;
-      font-size: 1.1rem;
-      font-weight: bold;
-      color: $color-flog-blue;
-      margin-top: 3em;
-    }
-    p {
-      margin-bottom: 1rem;
-      // text-align: justify;
-    }
-    img.headshot {
-      position: absolute;
-      // margin-left: -7em;
-      margin-top: -6rem;
-      // margin-left: 1rem;
-      width: 8rem;
-      height: 8rem;
-      @include border-radius(10rem);
-      background: url(/images/headshot.jpg) no-repeat;
-      @include box-shadow(0 -10px 15px rgba(0, 0, 0, .2), 0 0 5px rgba(0, 0, 0, .2));
     }
   }
 }
