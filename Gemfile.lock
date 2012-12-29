@@ -93,6 +93,7 @@ GEM
     rb-inotify (0.8.8)
       ffi (>= 0.5.0)
     redcarpet (2.2.2)
+    ruby-prof (0.11.3)
     sass (3.2.4)
     sinatra (1.3.3)
       rack (~> 1.3, >= 1.3.6)
@@ -135,4 +136,5 @@ DEPENDENCIES
   middleman-sprockets
   middleman-syntax
   redcarpet
+  ruby-prof
   susy

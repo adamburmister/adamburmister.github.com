@@ -1,5 +1,4 @@
 ---
-layout: article_layout
 title: New Beginnings
 subtitle: Candy is dandy, but liquor is quicker.
 scheme: dark

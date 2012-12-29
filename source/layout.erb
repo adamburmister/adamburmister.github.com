@@ -21,18 +21,23 @@
     </a>
 
     <ul>
-      <li><a href="/blog" class="active">Blog</a></li>
+      <li><a href="/" class="active">Blog</a></li>
       <li><a href="http://github.com/adamburmister"><i class="icon-github"></i> Code</a></li>
       <li><a href="http://uk.linkedin.com/adamburmister"><i class="icon-linkedin"></i> Work</a></li>
       <li><a href="https://twitter.com/adamburmister"><i class="icon-twitter"></i> Rant</a></li>
     </ul>
   </nav>
 
+  <% if current_article %>
   <div class="mast elastic-960" id="headline">
     <time><%= current_article.date.strftime "%d %B, %Y" %></time>
     <h2><%= current_article.title %></h2>
     <p class="subtitle"><%= current_article.data.subtitle %></p>
   </div>
+  <% else %>
+    Render the homepage
+  <% end %>
+
 </header>
 
 <div id="main">
