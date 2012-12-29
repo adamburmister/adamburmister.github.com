@@ -97,7 +97,7 @@ header.site {
     bottom: -11.9rem;
     left: 0;
     z-index: 1;
-    @include border-radius(3px);
+    @include border-radius(10px);
     background-color: $shadow-color;
     @include box-shadow(-1rem 0 3rem 0.5rem $shadow-color);
   }
@@ -259,7 +259,8 @@ header.site {
   // background-image: url(http://subtlepatterns.com/patterns/daimond_eyes.png);
   // background: #fff url(http://subtlepatterns.com/patterns/stacked_circles.png);
   // background: url(http://subtlepatterns.com/patterns/pineapplecut.png);
-  background: url(http://subtlepatterns.com/patterns/small-crackle-bright.png);
+  // background: url(http://subtlepatterns.com/patterns/small-crackle-bright.png);
+  background: #F3F1EB;
 
   article {
     width: 100%;
@@ -275,7 +276,8 @@ header.site {
       position: relative;
       margin-top: -8rem;
       background-color: #fff;
-      @include border-radius(3px);
+      @include border-radius(0 10px);
+      border-top: 5px solid $color-flog-orange;
       padding: 5rem 0;
       z-index: 2;
 
@@ -292,10 +294,14 @@ header.site {
         float: right;
 
         .wide {
-          // @include pull(3);
+          @include pull(1);
+          @include post(-1);
           // @include span-columns(18,12);
           margin-top: 2rem;
           margin-bottom: 2rem;
+          // margin-left: -12%;
+          // margin-right: -12%;
+          // background: red;
         }
       }
     }
@@ -308,6 +314,7 @@ header.site {
       // border-left: 1px solid #eee;
       position: relative;
       padding: 2rem 0;
+      font-weight: 200;
 
       // &:after {
       //   content: ' ';
