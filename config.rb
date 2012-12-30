@@ -6,9 +6,9 @@ Time.zone = "GMT"
 
 activate :blog do |blog|
   # blog.prefix = "blog"
-  # blog.permalink = ":year/:month/:day/:title.html"
-  # blog.sources = ":year-:month-:day-:title.html"
-  # blog.taglink = "tags/:tag.html"
+  # blog.permalink = "blog/:year/:month/:day/:title.html"
+  # blog.sources = "blog/:year-:month-:day-:title.html"
+  # blog.taglink = "blog/tags/:tag.html"
   blog.layout = "article_layout"
   # blog.summary_separator = /(READMORE)/
   # blog.summary_length = 250
@@ -18,11 +18,11 @@ activate :blog do |blog|
   # blog.default_extension = ".markdown"
 
   blog.tag_template = "tag.html"
-  blog.calendar_template = "calendar.html"
+  # blog.calendar_template = "calendar.html"
 
-  # blog.paginate = true
-  # blog.per_page = 1
-  # blog.page_link = "page/:num"
+  blog.paginate = true
+  blog.per_page = 1
+  blog.page_link = "page/:num"
 end
 
 page "/feed.xml", :layout => false
@@ -68,6 +68,10 @@ require 'susy'
 
 # Automatic image dimensions on image_tag helper
 activate :automatic_image_sizes
+
+activate :directory_indexes
+
+activate :favicon_maker
 
 # Methods defined in the helpers block are available in templates
 # helpers do

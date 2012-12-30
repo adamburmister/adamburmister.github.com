@@ -15,3 +15,4 @@ gem "middleman-sprockets"
 gem "middleman-syntax"
 
 gem "ruby-prof"
+gem "middleman-favicon-maker"

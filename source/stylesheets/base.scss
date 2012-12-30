@@ -1,9 +1,6 @@
 @import "lib/normalize";
 @import "type";
 
-$shadow-width: 75%;
-$shadow-color: rgba(0,0,0,0.2);
-
 * {
   @include box-sizing(border-box);
 }
@@ -13,17 +10,14 @@ html, body, .wrapper {
   min-height: 100%;
   height: 100%;
 }
-header.site {
-  height: 99%;
-  max-height: 58rem;
-}
+
 body {
   overflow-x: hidden;
   font: $base-font-size $base-font-family;
   line-height: $base-line-height;
 
   color: #353535;
-  background: #ececec;
+  background: #F3F1EB;
 }
 
 a {
@@ -32,11 +26,17 @@ a {
 
 // Anchors
 #main {
+  max-width: $site-width-max;
+  margin: 0 auto;
+
   a {
     color: $color-flog-orange;
     padding-left: 0.2rem;
     padding-right: 0.2rem;
+    text-decoration: none;
+    border-bottom: 1px dotted $color-flog-orange;
     @include border-radius(2px);
+
     &:hover {
       background-color: $color-flog-orange;
       color: #fff;
@@ -45,74 +45,20 @@ a {
   }
 }
 
-
-#main, header.site {
-  max-width: $site-width-max;
-  // background: #fff;
-  margin: 0 auto;
-}
-// // Typography
-// h1, h2, h3, h4, h5, h6 {
-//   text-transform: uppercase;
-//   font-weight: 700;
-//   color: #000;
-//   text-rendering: optimizeLegibility;
-// }
-// p {
-//   margin: 0 0 $base-line-height 0;
-// }
-// strong {
-//   font-weight: bold;
-// }
-// em {
-//   font-style: italic;
-// }
-// sup {
-//   line-height: 0;
-// }
-
 // Site wide elements
-header.site {
+header.page {
   $site-header-padding: 4rem;// $base-line-height * 2;
   position: relative;
-  min-height: 40rem;
-
-  background-color: #999;
-  background: $color-flog-orange url(http://onwander.com/assets/splash/backgrounds/lost-d7765d3dbde4fc218a79cca4e8ce5e06.jpg) no-repeat 50% 0%;
-  background-size: cover;
   @include box-shadow(0 0 10px rgba(255,255,255,0.2));
 
-  // @include at-breakpoint($break-tablet) {
-
-  // }
-
-  // min-height: 44rem;
-
-  &:before {
-    content: '';
-    width: $shadow-width;
-    // margin-left: -($shadow-width/2);
-    height: 20rem;
-    position: absolute;
-    bottom: -11.9rem;
-    left: 0;
-    z-index: 1;
-    @include border-radius(10px);
-    background-color: $shadow-color;
-    @include box-shadow(-1rem 0 3rem 0.5rem $shadow-color);
-  }
-
   a {
-    // color: inherit;
     color: $color-flog-orange;
-
     // text-shadow: 0 0 8px rgba(0,0,0,.5);
     text-decoration: none;
     text-transform: uppercase;
     font-family: "Lato";
     font-size: 0.8em;
     font-weight: bold;
-
     display: block;
     letter-spacing: 0.3em;
     line-height: 2rem;
@@ -121,30 +67,16 @@ header.site {
     &:hover {
       color: #000;
     }
-
-    // &.active {
-    //   border-bottom: 2px solid;
-    // }
   }
 
   nav {
     $logo-size: 4rem;
     $logo-padding: 0.5rem;
-
     padding-top: $site-header-padding; // space out from the top of the page
     padding-bottom: $site-header-padding / 2; // space out from the top of the page
-    // height: $site-header-height - ($site-header-padding / 2);
-    // margin-bottom: -$site-header-height - ($site-header-padding * 2) - 1px;
-
-    // border-bottom: 1px solid rgba(255,255,255,0.5);
 
     a#logo {
       float: left;
-
-      // @include opacity(0.9);
-      // &:hover {
-      //   @include opacity(0.99);
-      // }
 
       h1 {
         font-family: "Cassannet Bold";
@@ -153,23 +85,16 @@ header.site {
         width: $logo-size;
         height: $logo-size;
         line-height: $logo-size;
-        // // padding: $logo-padding;
         margin-top: $logo-padding;
         margin-bottom: 0;
         text-align: center;
         vertical-align: middle;
         @include border-radius($logo-size);
-        // background: url(../images/logo.png) no-repeat 50% 50%;
-        // background-size: cover;
         background-color: $color-flog-orange;
         color: #fff;
         font-size: 1rem;
         letter-spacing: 0.05em;
-
         text-shadow: 0 0 1px $color-flog-orange;
-
-        // overflow: hidden;
-        // text-indent: -999em;
       }
     }
 
@@ -177,23 +102,9 @@ header.site {
       float: right;
       list-style: none;
       margin-top: 12px;
-      // line-height: $logo-size - ($logo-padding * 2);
 
       li {
         display: inline-block;
-
-        // margin-left: 2rem;
-        // &:before {
-        //   content: '/';
-        //   color: #fff;
-        //   margin-right: 1rem;
-        // }
-        // &:first-child {
-        //   &:before {
-        //     content: '';
-        //   }
-        //   margin-left: 0;
-        // }
 
         a {
           line-height: 3rem;
@@ -203,7 +114,6 @@ header.site {
           &.active {
             color: $color-flog-orange;
             padding: 0 3rem;
-            // border-color: $color-flog-orange;
           }
 
           i {
@@ -221,161 +131,22 @@ header.site {
       }
     }
   }
-
-  .mast {
-    $article-header-padding: 4rem;
-    // min-height: 100%;
-    // height: $article-header-height;
-    padding-top: $article-header-padding;
-    padding-bottom: $article-header-padding;
-    font-family: Lato;
-    font-weight: 300;
-
-    > * {
-      display: block;
-      text-align: center;
-    }
-    time {
-      font-size: 1.2rem;
-      font-weight: 100;
-    }
-    h2 {
-      font-family: $base-font-family;
-      font-size: 3rem;
-      font-weight: 400;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-    }
-    p {
-      font-style: italic;
-      margin: 0 0 1rem 0;
-      font-size: 1.5rem;
-    }
-  }
 }
 
 #main {
-  // background-image: url(http://subtlepatterns.com/patterns/redox_01.png);
-  // background-image: url(http://subtlepatterns.com/patterns/daimond_eyes.png);
-  // background: #fff url(http://subtlepatterns.com/patterns/stacked_circles.png);
-  // background: url(http://subtlepatterns.com/patterns/pineapplecut.png);
-  // background: url(http://subtlepatterns.com/patterns/small-crackle-bright.png);
-  background: #F3F1EB;
-
-  article {
-    width: 100%;
-
-    // @include container;
-
-    .post {
-      float: left;
-      width: $shadow-width;
-      @include box-shadow(0 -0.4em 0.5rem rgba(0,0,0,0.1));
-      margin: 0;
-      // @include span-columns(8,12);
-      position: relative;
-      margin-top: -8rem;
-      background-color: #fff;
-      @include border-radius(0 10px);
-      border-top: 5px solid $color-flog-orange;
-      padding: 5rem 0;
-      z-index: 2;
-
-      h1,h2,h3,h4,h5,h6 {
-        color: #222;
-        @include pull(1);
-      }
-
-      section {
-        @include squish(1,1);
-        // @include span-columns(8 omega, 12);
-        max-width: $column-width * 10;
-        // padding: 0 $column-width;
-        float: right;
-
-        .wide {
-          @include pull(1);
-          @include post(-1);
-          // @include span-columns(18,12);
-          margin-top: 2rem;
-          margin-bottom: 2rem;
-          // margin-left: -12%;
-          // margin-right: -12%;
-          // background: red;
-        }
-      }
-    }
-
-    .sidebar {
-      width: 25%;
-      float: left;
-      // background-color: blue;
-      // @include box-shadow(inset 0 0 3rem 0.5rem $shadow-color);
-      // border-left: 1px solid #eee;
-      position: relative;
-      padding: 2rem 0;
-      font-weight: 200;
-
-      // &:after {
-      //   content: ' ';
-      //   @include background-image(linear-gradient(#eee, white));
-      //   width: 2px;
-      //   height: 20rem;
-      //   position: absolute;
-      //   left: -2px;
-      //   bottom: 0;
-      // }
-
-      aside {
-        float: left;
-        max-width: $column-width * 3.5;
-        min-width: $column-width * 2.5;
-        @include squish(1,1);
-        color: #999;
-        font-family: "Lato";
-        font-size: 0.9rem;
-
-        h3 {
-          font-family: inherit;
-          font-size: 1.1rem;
-          font-weight: bold;
-          color: $color-flog-blue;
-          margin-top: 3em;
-        }
-        p {
-          margin-bottom: 1rem;
-          // text-align: justify;
-        }
-        img.headshot {
-          position: absolute;
-          // margin-left: -7em;
-          margin-top: -6rem;
-          // margin-left: 1rem;
-          width: 8rem;
-          height: 8rem;
-          @include border-radius(10rem);
-          background: url(/images/headshot.jpg) no-repeat;
-          @include box-shadow(0 -10px 15px rgba(0, 0, 0, .2), 0 0 5px rgba(0, 0, 0, .2));
-        }
-      }
-    }
-  }
-
   footer {
     clear: both;
     padding-bottom: 3rem;
     padding-top: 1rem;
     margin-top: 1rem;;
-    // border-top: 2px solid #eee;
     font-family: "Lato", "Helvetica", sans-serif;
 
-    div.top {
-      @include span-columns(2 omega,12);
-    }
     nav.content {
-      // @include push(2);
-      // @include span-columns(8,12);
       text-align: center;
+    }
+    .copyright {
+      text-align: center;
+      color: rgba(0,0,0,0.3);
     }
   }
 }

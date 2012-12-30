@@ -1,33 +1,46 @@
 @import '_variables';
 
 body {
+  // TODO: Write mixin helper for this
   &.black {
-    header.site {
+    header.page {
       color: #111;
-      a.active {
-        border-color: #111;
+      #logo {
+        h1 {
+          background-color: #111;
+        }
+      }
+      a {
+        color: #111;
+        &.active {
+          color: #111;
+          border-color: #111;
+        }
       }
     }
   }
 
   &, &.dark {
-    header.site {
-      background-color: $color-flog-gray;
+    header.page {
+      // background-color: $color-flog-gray;
       color: #923e2b;
-      .mast {
+      .hero {
         font-size: 2em;
         h2 {
           color: inherit;
         }
       }
-      a.active {
-        border-color: $color-flog-orange;
+      a {
+        color: $color-flog-orange;
+        &.active {
+          border-color: $color-flog-orange;
+        }
       }
     }
   }
 
   &.orange {
-    header.site {
+    header.page {
       color: $color-flog-orange;
       a.active {
         border-color: $color-flog-orange;
@@ -36,7 +49,7 @@ body {
   }
 
   &.light {
-    header.site {
+    header.page {
       color: #d0dbcb;
       a.active {
         border-color: #d0dbcb;
@@ -45,7 +58,7 @@ body {
   }
 
   &.white {
-  	header.site {
+  	header.page {
       color: #fff;
       a.active {
         border-color: #fff;

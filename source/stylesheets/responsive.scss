@@ -1,4 +1,10 @@
 @include at-breakpoint(0 768px) {
+  header.page {
+    &:before {
+      display: none;
+    }
+  }
+
   #main article .post {
     // @include pull(0);
     float: none;
@@ -55,7 +61,7 @@
   body {
     font-size: 14px;
   }
-  header.site {
+  header.page {
     nav {
       padding-top: 1rem;
       padding-bottom: 1rem;
@@ -89,12 +95,9 @@
         }
       }
     }
-    .mast {
+    .hero {
       padding-top: 1rem;
       padding-bottom: 1rem;
-    }
-    &:before {
-      display: none;
     }
   }
   #main article .post {
@@ -147,7 +150,7 @@
 }
 
 // @include layout(6) {
-//   .site nav {
+//   .page nav {
 //     background-color: #f00;
 //   }
 // }

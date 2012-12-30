@@ -3,42 +3,20 @@
   <head>
   <meta charset="utf-8">
   <title><%= content_for?(:title) ? "#{yield_content :title} | " : '' %>Adam Burmister, Web Superhero in Training</title>
-  <meta name="description" content="Adam Burmister: Entrepreneur, Developer, Designer in London">
+  <meta name="description" content="Adam Burmister: Entrepreneur, Developer, Designer in London, owner of a lonely heart">
   <meta name="author" content="Adam Burmister, @adamburmister">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
   <%= favicon_tag 'images/favicon.png' %>
   <%= stylesheet_link_tag "main" %>
-  <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js", "flog" %>
+  <%= javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" %>
+  <%= yield_content :head_stylesheet %>
+  <%= yield_content :head_javascript %>
   <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body class="<%= current_page.data.scheme || 'black' %>">
 
-<header class="site">
-  <nav class="elastic-960">
-    <a id="logo" href="/">
-      <h1>Flog</h1>
-    </a>
-
-    <ul>
-      <li><a href="/" class="active">Blog</a></li>
-      <li><a href="http://github.com/adamburmister"><i class="icon-github"></i> Code</a></li>
-      <li><a href="http://uk.linkedin.com/adamburmister"><i class="icon-linkedin"></i> Work</a></li>
-      <li><a href="https://twitter.com/adamburmister"><i class="icon-twitter"></i> Rant</a></li>
-    </ul>
-  </nav>
-
-  <% if current_article %>
-  <div class="mast elastic-960" id="headline">
-    <time><%= current_article.date.strftime "%d %B, %Y" %></time>
-    <h2><%= current_article.title %></h2>
-    <p class="subtitle"><%= current_article.data.subtitle %></p>
-  </div>
-  <% else %>
-    Render the homepage
-  <% end %>
-
-</header>
+<%= yield_content :header %>
 
 <div id="main">
   <%= yield %>

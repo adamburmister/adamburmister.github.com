@@ -1,3 +1,20 @@
+<% content_for :head_stylesheet do %>
+<%= stylesheet_link_tag "article" %>
+<% end %>
+<% content_for :header do %>
+<header class="page">
+  <%= partial "partials/_nav" %>
+
+  <% if current_article %>
+  <div class="hero elastic" id="headline">
+    <time><%= current_article.date.strftime "%d %B, %Y" %></time>
+    <h2><%= current_article.title %></h2>
+    <p class="subtitle"><%= current_article.data.subtitle %></p>
+  </div>
+  <% end %>
+</header>
+<% end %>
+
 <% wrap_layout :layout do %>
   <article>
     <div class="post">
@@ -21,13 +38,17 @@
     </div>
   </article>
 
-  <footer class="elastic-960">
-    <nav class="content">
+  <footer class="elastic">
+    <!-- <nav class="content">
       <a href="#">Previous Post</a> / <a href="#">Next Post</a>
-    </nav>
+    </nav> -->
     <!-- <div class="top">
       <a href="#headline">Back to top</a>
     </div> -->
+    <div class="copyright">
+      <small>
+        &copy; <%= current_article ? current_article.date.year : Date.today.year %> Adam Burmister
+      </small>
+    </div>
   </footer>
-
 <% end %>

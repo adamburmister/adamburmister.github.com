@@ -1,0 +1,147 @@
+@import "variables";
+@import "compass";
+@import "susy";
+
+$shadow-width: 75%;
+$shadow-color: rgba(0,0,0,0.2);
+
+header.page {
+  max-width: $site-width-max;
+  height: 99%;
+  max-height: 58rem;
+  margin: 0 auto;
+}
+
+header.page {
+  min-height: 40rem;
+  background: $color-flog-orange url(http://onwander.com/assets/splash/backgrounds/lost-d7765d3dbde4fc218a79cca4e8ce5e06.jpg) no-repeat 50% 0%;
+  background-size: cover;
+
+  &:before {
+    content: '';
+    width: $shadow-width;
+    height: 20rem;
+    position: absolute;
+    bottom: -11.9rem;
+    left: 0;
+    z-index: 1;
+    @include border-radius(10px);
+    background-color: $shadow-color;
+    @include box-shadow(-1rem 0 3rem 0.5rem $shadow-color);
+  }
+
+  .hero {
+    $article-header-padding: 4rem;
+    padding-top: $article-header-padding;
+    padding-bottom: $article-header-padding;
+    font-family: Lato;
+    font-weight: 300;
+
+    > * {
+      display: block;
+      text-align: center;
+    }
+    time {
+      font-size: 1.2rem;
+      font-weight: 100;
+    }
+    h2 {
+      font-family: $base-font-family;
+      font-size: 3rem;
+      font-weight: 400;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-style: italic;
+      margin: 0 0 1rem 0;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+#main {
+  article {
+    width: 100%;
+
+    // @include container;
+
+    .post {
+      float: left;
+      width: $shadow-width;
+      @include box-shadow(0 -0.4em 0.5rem rgba(0,0,0,0.1));
+      margin: 0;
+      // @include span-columns(8,12);
+      position: relative;
+      margin-top: -8rem;
+      background-color: #fff;
+      @include border-radius(0 10px);
+      border-top: 5px solid $color-flog-orange;
+      padding: 5rem 0;
+      z-index: 2;
+
+      h1,h2,h3,h4,h5,h6 {
+        color: #222;
+        @include pull(1);
+      }
+
+      section {
+        @include squish(1,1);
+        // @include span-columns(8 omega, 12);
+        max-width: $column-width * 10;
+        // padding: 0 $column-width;
+        float: right;
+
+        .wide {
+          @include pull(1);
+          @include post(-1);
+          // @include span-columns(18,12);
+          margin-top: 2rem;
+          margin-bottom: 2rem;
+          // margin-left: -12%;
+          // margin-right: -12%;
+          // background: red;
+        }
+      }
+    }
+
+    .sidebar {
+      width: 25%;
+      float: left;
+      position: relative;
+      padding: 2rem 0;
+      font-weight: 200;
+
+      aside {
+        float: left;
+        max-width: $column-width * 3.5;
+        min-width: $column-width * 2.5;
+        @include squish(1,1);
+        color: #999;
+        font-family: "Lato";
+        font-size: 0.9rem;
+
+        h3 {
+          font-family: inherit;
+          font-size: 1.1rem;
+          font-weight: bold;
+          color: $color-flog-blue;
+          margin-top: 3em;
+        }
+        p {
+          margin-bottom: 1rem;
+          text-align: justify;
+        }
+        img.headshot {
+          position: absolute;
+          margin-top: -6rem;
+          width: 8rem;
+          height: 8rem;
+          @include border-radius(10rem);
+          background: url(/images/headshot.jpg) no-repeat;
+          @include box-shadow(0 -10px 15px rgba(0, 0, 0, .2), 0 0 5px rgba(0, 0, 0, .2));
+        }
+      }
+    }
+  }
+}
