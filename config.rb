@@ -1,3 +1,7 @@
+# Racks
+require "rack/google_analytics"
+use Rack::GoogleAnalytics, :web_property_id => "UA-000000-1"
+
 ###
 # Blog settings
 ###
@@ -115,3 +119,4 @@ configure :build do
   # Or use a different image path
   # set :http_path, "/Content/images/"
 end
+

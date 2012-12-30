@@ -66,6 +66,10 @@ header.page {
 
     // @include container;
 
+    .highlight {
+      font-size: 0.9em;
+    }
+
     .post {
       float: left;
       width: $shadow-width;
