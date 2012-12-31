@@ -1,7 +1,5 @@
 <% content_for :head_javascript do %>
-<%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js",
-                           "lib/jquery.isotope.min.js",
-                           "lib/jquery.pfold.js" %>
+<%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js", "home" %>
 <% end %>
 <% content_for :head_stylesheet do %>
 <%= stylesheet_link_tag "home" %>
@@ -17,25 +15,24 @@
     <div class="item">
       <div class="uc-container">
         <div class="uc-initial-content">
-          <img src="/images/headshot.jpg" alt="image01" />
+          <img src="/images/home/bbc/thumb.png" alt="BBC Homepage" />
           <span class="icon-eye"></span>
         </div>
         <div class="uc-final-content">
-          <img src="/images/headshot.jpg" alt="image01-large" />
-          <div class="title"><h4>BBC Homepage</h4> Lead Developer <a href="http://bbc.co.uk" class="icon-link"></a></div>
-          <span class="icon-cancel"></span>
+          <img src="/images/home/bbc/expanded.jpg" alt="The BBC Homepage" />
+          <div class="title"><h4>BBC Homepage</h4> Lead Developer</div>
         </div>
       </div><!-- / uc-container -->
     </div>
     <div class="item">
           <div class="uc-container">
         <div class="uc-initial-content">
-          <img src="/images/headshot.jpg" alt="image01" />
+          <img src="/images/home/xero/thumb.png" alt="I helped make Xero, the Beautiful Accounting Software" />
           <span class="icon-eye"></span>
         </div>
         <div class="uc-final-content">
-          <img src="/images/headshot.jpg" alt="image01-large" />
-          <div class="title"><h4>BBC Homepage</h4> Lead Developer <a href="http://bbc.co.uk" class="icon-link"></a></div>
+          <img src="/images/home/xero/expanded.jpg" alt="Xero's bank reconciliation screen" />
+          <div class="title"><h4>Xero (application and homepage)</h4> Senior frontend engineer</div>
           <span class="icon-cancel"></span>
         </div>
       </div><!-- / uc-container -->
@@ -43,12 +40,12 @@
     <div class="item">
       <div class="uc-container">
         <div class="uc-initial-content">
-          <img src="/images/headshot.jpg" alt="image01" />
+          <img src="/images/home/backchat/thumb.png" alt="BackChat.io provides real-time message filtering as a service" />
           <span class="icon-eye"></span>
         </div>
         <div class="uc-final-content">
-          <img src="/images/headshot.jpg" alt="image01-large" />
-          <div class="title"><h4>BBC Homepage</h4> Lead Developer <a href="http://bbc.co.uk" class="icon-link"></a></div>
+          <img src="/images/home/backchat/expanded.jpg" alt="BackChat.io" />
+          <div class="title"><h4>BackChat.io</h4> Founder, Product Development &amp; Engineering</div>
           <span class="icon-cancel"></span>
         </div>
       </div><!-- / uc-container -->
@@ -56,11 +53,11 @@
     <div class="item">
       <div class="uc-container">
         <div class="uc-initial-content">
-          <img src="/images/headshot.jpg" alt="image01" />
+          <img src="/images/superman.jpg" alt="image01" />
           <span class="icon-eye"></span>
         </div>
         <div class="uc-final-content">
-          <img src="/images/headshot.jpg" alt="image01-large" />
+          <img src="/images/superman.jpg" alt="image01-large" />
           <div class="title"><h4>BBC Homepage</h4> Lead Developer <a href="http://bbc.co.uk" class="icon-link"></a></div>
           <span class="icon-cancel"></span>
         </div>
@@ -69,11 +66,11 @@
     <div class="item">
         <div class="uc-container">
         <div class="uc-initial-content">
-          <img src="/images/headshot.jpg" alt="image01" />
+          <img src="/images/superman.jpg" alt="image01" />
           <span class="icon-eye"></span>
         </div>
         <div class="uc-final-content">
-          <img src="/images/headshot.jpg" alt="image01-large" />
+          <img src="/images/superman.jpg" alt="image01-large" />
           <div class="title"><h4>BBC Homepage</h4> Lead Developer <a href="http://bbc.co.uk" class="icon-link"></a></div>
           <span class="icon-cancel"></span>
         </div>
@@ -82,133 +79,25 @@
     <div class="item">
         <div class="uc-container">
         <div class="uc-initial-content">
-          <img src="/images/headshot.jpg" alt="image01" />
+          <img src="/images/superman.jpg" alt="image01" />
           <span class="icon-eye"></span>
         </div>
         <div class="uc-final-content">
-          <img src="/images/headshot.jpg" alt="image01-large" />
+          <img src="/images/superman.jpg" alt="image01-large" />
           <div class="title"><h4>BBC Homepage</h4> Lead Developer <a href="http://bbc.co.uk" class="icon-link"></a></div>
           <span class="icon-cancel"></span>
         </div>
       </div><!-- / uc-container -->
     </div>
   </div>
+
+  <footer class="elastic">
+    <div class="copyright">
+      <small>
+        &copy; <%= Date.today.year %> Adam Burmister
+      </small>
+    </div>
+  </footer>
 </div>
-
-<%= yield %>
-
-<script>
-var $grid = $('#grid')
-// initialize Isotope
-$grid.isotope({
-  containerStyle: { overflow: 'visible', position: 'relative'},
-  itemSelector : '.item',
-  // options...
-  resizable: false, // disable normal resizing
-  // set columnWidth to a percentage of container width
-  masonry: { columnWidth: $grid.width() / 3 }//,
-  // getSortData : {
-  //   symbol : function( $elem ) {
-  //     return $elem.attr('data-symbol');
-  //   },
-  //   category : function( $elem ) {
-  //     return $elem.attr('data-category');
-  //   },
-  //   number : function( $elem ) {
-  //     return parseInt( $elem.find('.number').text(), 10 );
-  //   },
-  //   weight : function( $elem ) {
-  //     return parseFloat( $elem.find('.weight').text().replace( /[\(\)]/g, '') );
-  //   },
-  //   name : function ( $elem ) {
-  //     return $elem.find('.name').text();
-  //   }
-  // }
-});
-
-// update columnWidth on window resize
-$(window).smartresize(function(){
-  $grid.isotope({
-    // update columnWidth to a percentage of container width
-    masonry: { columnWidth: $grid.width() / 3 }
-  });
-});
-
-// say we want to have only one item opened at one moment
-var opened = false;
-
-$grid.find('.uc-container').each(function(i) {
-  var $item = $(this), direction;
-  // switch( i ) {
-  //   case 0 : direction = ['right','bottom']; break;
-  //   case 1 : direction = ['left','bottom']; break;
-  //   case 2 : direction = ['right','top']; break;
-  //   case 3 : direction = ['left','top']; break;
-  // }
-  direction = ['right','bottom'];
-  var pfold = $item.pfold( {
-    folddirection : direction,
-    speed : 600,
-    onEndFolding : function() { opened = false; },
-  });
-  // $item.find( 'span.icon-eye' ).on( 'click', function() {
-  //   console.log("Hi");
-  //   if( !opened ) {
-  //     opened = true;
-  //     pfold.unfold();
-  //   }
-  // } ).end().find( 'span.icon-cancel' ).on( 'click', function() {
-  //   pfold.fold();
-  // });
-});
-
-var animating = false;
-$grid.delegate( '.item', 'click', function(){
-  if(animating) return;
-
-  var duration = 300;
-  var $active = $('.active');
-  var activeClosingDelay = 0;
-  var $this = $(this);
-
-  animating = true;
-
-  if($this.is($active)) {
-    animating = false;
-    return;
-  } else {
-    var pfold = $active.find('.uc-container').data('pfold');
-    if(pfold) {
-      pfold.fold();
-    }
-    activeClosingDelay = duration * 3;
-    $active.toggleClass('active').animate({
-      width: "19.5em",
-      height: "19.5em"
-    }, duration, function() {
-      // $grid.isotope('reLayout')
-    });
-  }
-
-  setTimeout(function() {
-    $this.toggleClass('active').animate({
-      width: "39.5em",
-      height: "39.5em"
-    }, duration, function() {
-      $grid.isotope('reLayout');
-      var scrollY = $this.offset().top + $this.height();
-      console.log(scrollY);
-      if(scrollY > $(window).height()) {
-        $('html, body').animate({scrollTop: scrollY}, 'slow');
-      }
-      setTimeout(function() {
-        $this.find('.uc-container').data('pfold').unfold();
-        animating = false;
-      }, duration)
-    });
-  }, activeClosingDelay)
-});
-
-</script>
 
 <% end %>
