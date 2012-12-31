@@ -353,18 +353,21 @@
 
     .title {
         position: absolute;
-        background: rgba(255,255,255,0.9);
-        bottom: 10px;
-        left: 10px;
-        right: 10px;
+        background: rgba(0,0,0,0.7);
+        bottom: 5px;
+        left: 5px;
+        right: 5px;
         padding: 10px;
-        font-size: 12px;
-        line-height: 16px;
-        font-weight: bold;
+        color: #fff;
+        // font-size: 12px;
+        // line-height: 16px;
+        // font-weight: bold;
     }
 
     .title h4 {
         color: #aaa;
+        margin: 0;
+        color: #fff;
     }
 
     .icon-link {

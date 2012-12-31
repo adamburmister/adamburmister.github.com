@@ -2,7 +2,7 @@
 require "middleman-smusher"
 
 require "rack/google_analytics"
-use Rack::GoogleAnalytics, :web_property_id => "UA-000000-1"
+use Rack::GoogleAnalytics, :web_property_id => "UA-85729-1"
 
 ###
 # Blog settings
