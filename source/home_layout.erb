@@ -162,18 +162,26 @@ $grid.find('.uc-container').each(function(i) {
   // });
 });
 
+var animating = false;
 $grid.delegate( '.item', 'click', function(){
+  if(animating) return;
+
   var duration = 300;
   var $active = $('.active');
+  var activeClosingDelay = 0;
   var $this = $(this);
 
+  animating = true;
+
   if($this.is($active)) {
+    animating = false;
     return;
   } else {
     var pfold = $active.find('.uc-container').data('pfold');
     if(pfold) {
       pfold.fold();
     }
+    activeClosingDelay = duration * 3;
     $active.toggleClass('active').animate({
       width: "19.5em",
       height: "19.5em"
@@ -182,15 +190,23 @@ $grid.delegate( '.item', 'click', function(){
     });
   }
 
-  $this.toggleClass('active').animate({
-    width: "39.5em",
-    height: "39.5em"
-  }, duration, function() {
-    $grid.isotope('reLayout');
-    setTimeout(function() {
-      $this.find('.uc-container').data('pfold').unfold();
-    }, 300)
-  });
+  setTimeout(function() {
+    $this.toggleClass('active').animate({
+      width: "39.5em",
+      height: "39.5em"
+    }, duration, function() {
+      $grid.isotope('reLayout');
+      var scrollY = $this.offset().top + $this.height();
+      console.log(scrollY);
+      if(scrollY > $(window).height()) {
+        $('html, body').animate({scrollTop: scrollY}, 'slow');
+      }
+      setTimeout(function() {
+        $this.find('.uc-container').data('pfold').unfold();
+        animating = false;
+      }, duration)
+    });
+  }, activeClosingDelay)
 });
 
 </script>

@@ -74,6 +74,10 @@
   height: 19.5em;
   // background: #ccc;
   overflow: visible !important;
+
+  &.active {
+    z-index: 100;
+  }
 }
 // .item.tall {
 //   height: 39.5em;
@@ -284,7 +288,7 @@
 
 #grid {
     .uc-initial-content {
-      background: #F3F1EB;
+      background: darken($color-flog-lightgray, 5%);
     }
 
     .uc-single,
