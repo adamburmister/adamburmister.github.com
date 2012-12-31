@@ -1,0 +1,1 @@
+throw Error("Sprockets::FileNotFound: couldn't find file 'lib/jquery.pfold-ddd97ab0.js,'\n  (in /Users/adam/Development/adamburmister.github.com/source/javascripts/home.js.coffee:2)");
