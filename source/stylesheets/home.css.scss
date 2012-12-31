@@ -58,6 +58,14 @@
 {
   max-width: 60em; /* 960 px */
   margin: 0 auto;
+
+  h2 {
+    font-size: 1.9rem;
+    text-align: center;
+    margin: 0 0 2em 0;
+    padding: 0;
+    color: #777;
+  }
 }
 #list {
   width: 100%;
@@ -355,7 +363,7 @@
         width: 19.5em;
         height: 19.5em;
     }
-    .uc-final-content img {
+    .uc-final-content img.full {
         width: 39.5em;
         height: 39.5em;
     }

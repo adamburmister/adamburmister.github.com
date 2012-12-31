@@ -1,6 +1,9 @@
 #= require "lib/jquery.isotope.min.js"
 #= require "lib/jquery.pfold.js"
 
+# TODO LIST:
+# [ ] Make non-3d transform friendly (FF). Use mondernizr to check abilities
+
 $(document).ready ->
   opened = false
   animating = false
