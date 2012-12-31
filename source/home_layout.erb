@@ -5,9 +5,6 @@
 
 
 <% content_for :header do %>
-<header class="page">
-  <%= partial "partials/_nav" %>
-</header>
 <% end %>
 
 <% wrap_layout :layout do %>
@@ -76,25 +73,40 @@
   width: 100%;
 }
 .item {
-  margin: 5px 1%;
-  width: 28%;
+  /*margin: 5px 1%;*/
+  margin-bottom: 0.5em;
+  -webkit-transition-property: height, width;
+   -moz-transition-property: height, width;
+    -ms-transition-property: height, width;
+     -o-transition-property: height, width;
+        transition-property: height, width;
+  width: 19.5em;
+  height: 19.5em;
   background: #ccc;
 }
-.item.large {
-  width: 61%;
+.item.tall {
+  height: 39.5em;
+  -webkit-transition-property: height, width;
+   -moz-transition-property: height, width;
+    -ms-transition-property: height, width;
+     -o-transition-property: height, width;
+        transition-property: height, width;
+}
+.item.wide {
+  width: 39.5em;
 }
 </style>
 
 <div id="wrapper">
   <div id="list">
-    <div class="item" style="height: 14em;"></div>
-    <div class="item" style="height: 26em;"></div>
-    <div class="item" style="height: 8em;"></div>
-    <div class="item" style="height: 14em;"></div>
-    <div class="item" style="height: 8em;"></div>
-    <div class="item" style="height: 18em;"></div>
-    <div class="item" style="height: 16em;"></div>
-    <div class="item" style="height: 12em;"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
   </div>
 </div>
 
@@ -108,24 +120,24 @@ $container.isotope({
   // options...
   resizable: false, // disable normal resizing
   // set columnWidth to a percentage of container width
-  masonry: { columnWidth: $container.width() / 3 },
-  getSortData : {
-    symbol : function( $elem ) {
-      return $elem.attr('data-symbol');
-    },
-    category : function( $elem ) {
-      return $elem.attr('data-category');
-    },
-    number : function( $elem ) {
-      return parseInt( $elem.find('.number').text(), 10 );
-    },
-    weight : function( $elem ) {
-      return parseFloat( $elem.find('.weight').text().replace( /[\(\)]/g, '') );
-    },
-    name : function ( $elem ) {
-      return $elem.find('.name').text();
-    }
-  }
+  masonry: { columnWidth: $container.width() / 3 }//,
+  // getSortData : {
+  //   symbol : function( $elem ) {
+  //     return $elem.attr('data-symbol');
+  //   },
+  //   category : function( $elem ) {
+  //     return $elem.attr('data-category');
+  //   },
+  //   number : function( $elem ) {
+  //     return parseInt( $elem.find('.number').text(), 10 );
+  //   },
+  //   weight : function( $elem ) {
+  //     return parseFloat( $elem.find('.weight').text().replace( /[\(\)]/g, '') );
+  //   },
+  //   name : function ( $elem ) {
+  //     return $elem.find('.name').text();
+  //   }
+  // }
 });
 
 // update columnWidth on window resize
@@ -137,8 +149,22 @@ $(window).smartresize(function(){
 });
 
 $container.delegate( '.item', 'click', function(){
-  $(this).toggleClass('large');
-  $container.isotope('reLayout');
+  var duration = 500;
+  $('.active').toggleClass('active').animate({
+    width: "19.5em",
+    height: "19.5em"
+  }, duration);
+  $(this).toggleClass('active').animate({
+    width: "39.5em",
+    height: "39.5em"
+  }, duration, function() {
+    // Animation complete.
+    $container.isotope('reLayout')
+  });;
+
+
+
+  // $container.isotope('reLayout');
 });
 
 </script>

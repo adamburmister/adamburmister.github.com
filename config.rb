@@ -1,4 +1,6 @@
 # Racks
+require "middleman-smusher"
+
 require "rack/google_analytics"
 use Rack::GoogleAnalytics, :web_property_id => "UA-000000-1"
 
@@ -10,7 +12,7 @@ Time.zone = "GMT"
 
 activate :blog do |blog|
   # blog.prefix = "blog"
-  # blog.permalink = "blog/:year/:month/:day/:title.html"
+  blog.permalink = "blog/:year/:month/:day/:title"
   # blog.sources = "blog/:year-:month-:day-:title.html"
   # blog.taglink = "blog/tags/:tag.html"
   blog.layout = "article_layout"
@@ -105,16 +107,19 @@ configure :build do
   # Minify Javascript on build
   activate :minify_javascript
 
+  activate :gzip
+
   # Enable cache buster
   # activate :cache_buster
 
   # Use relative URLs
-  activate :relative_assets
+  #activate :relative_assets
 
   # Compress PNGs after build
   # First: gem install middleman-smusher
-  require "middleman-smusher"
   activate :smusher
+
+  activate :asset_hash
 
   # Or use a different image path
   # set :http_path, "/Content/images/"

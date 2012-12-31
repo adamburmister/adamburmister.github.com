@@ -1,10 +1,8 @@
 <% content_for :head_stylesheet do %>
 <%= stylesheet_link_tag "article" %>
 <% end %>
-<% content_for :header do %>
-<header class="page">
-  <%= partial "partials/_nav" %>
 
+<% content_for :header do %>
   <% if current_article %>
   <div class="hero elastic" id="headline">
     <time><%= current_article.date.strftime "%d %B, %Y" %></time>
@@ -12,7 +10,6 @@
     <p class="subtitle"><%= current_article.data.subtitle %></p>
   </div>
   <% end %>
-</header>
 <% end %>
 
 <% wrap_layout :layout do %>

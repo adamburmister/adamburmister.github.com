@@ -24,6 +24,27 @@ a {
   @include transition(color .2s);
 }
 
+ol, ul {
+  &.unstyled {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+
+    li {
+      margin: 0;
+    }
+  }
+}
+
+// The mobile nav
+#mobileNavBtn {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 1.5rem;
+}
+
 // Anchors
 #main {
   max-width: $site-width-max;
@@ -75,12 +96,11 @@ header.page {
     padding-top: $site-header-padding; // space out from the top of the page
     padding-bottom: $site-header-padding / 2; // space out from the top of the page
 
-    a#logo {
+    #logo {
       float: left;
 
       h1 {
         font-family: "Cassannet Bold";
-
         float: left;
         width: $logo-size;
         height: $logo-size;
@@ -95,6 +115,12 @@ header.page {
         font-size: 1rem;
         letter-spacing: 0.05em;
         text-shadow: 0 0 1px $color-flog-orange;
+      }
+
+      &:hover {
+        h1 {
+          background-image: url(/images/logo-hover-mask.png) no-repeat 50% 50%;
+        }
       }
     }
 
@@ -134,6 +160,18 @@ header.page {
 }
 
 #main {
+
+  .listing {
+    h2 {
+      margin: 0 0 1em 0;
+      font-size: 2rem;
+
+      span {
+        font-size: 0.5em;
+      }
+    }
+  }
+
   footer {
     clear: both;
     padding-bottom: 3rem;

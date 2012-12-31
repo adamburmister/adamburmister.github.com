@@ -1,11 +1,17 @@
 $(document).ready(function(){
-  var $window = $(window);
-  // //  data-bg-parallax-speed="3"
-  // $('[data-bg-parallax-speed]').each(function(){
-  //   var $el = $(this); // assigning the object
-  //   $window.scroll(function() {
-  //     var yPos = -($window.scrollTop() / $el.data('bg-parallax-speed'));
-  //     $el.css({ backgroundPosition: '50% '+ yPos + 'px' });
-  //   });
-  // });
+  var pull    = $('#mobileNavBtn');
+      menu    = $('header.page nav ul');
+      menuHeight  = menu.height();
+
+  pull.click(function(e){
+    e.preventDefault();
+    menu.slideToggle();
+  });
+
+  $(window).resize(function(){
+    var w = $(window).width();
+    if(w > 320 && menu.is(':hidden')) {
+      menu.removeAttr('style');
+    }
+  });
 });
