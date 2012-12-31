@@ -119,7 +119,7 @@ configure :build do
   # First: gem install middleman-smusher
   activate :smusher
 
-  activate :asset_hash
+  # activate :asset_hash
 
   # Or use a different image path
   # set :http_path, "/Content/images/"

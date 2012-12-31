@@ -324,9 +324,18 @@
       -ms-transition: all 0.3s linear;
       transition: all 0.3s linear;
 
+      small {
+        display:none;
+        font-family: "Lato", "Helvetica", sans-serif;
+        line-height: 1;
+        font-size: 1rem;
+        margin-top: -5rem;
+      }
+
       &:hover {
         background: transparentize($color-flog-orange, 0.3);
         opacity: 1;
+        small { display:block; }
       }
     }
 
