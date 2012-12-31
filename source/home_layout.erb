@@ -1,126 +1,112 @@
 <% content_for :head_javascript do %>
 <%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js",
-                           "/javascripts/jquery.isotope.min.js" %>
+                           "lib/jquery.isotope.min.js",
+                           "lib/jquery.pfold.js" %>
 <% end %>
-
+<% content_for :head_stylesheet do %>
+<%= stylesheet_link_tag "home" %>
+<% end %>
 
 <% content_for :header do %>
 <% end %>
 
 <% wrap_layout :layout do %>
 
-<style>
-/* Start: Recommended Isotope styles */
-
-/**** Isotope Filtering ****/
-
-.isotope-item {
-  z-index: 2;
-}
-
-.isotope-hidden.isotope-item {
-  pointer-events: none;
-  z-index: 1;
-}
-
-/**** Isotope CSS3 transitions ****/
-
-.isotope,
-.isotope .isotope-item {
-  -webkit-transition-duration: 0.8s;
-     -moz-transition-duration: 0.8s;
-      -ms-transition-duration: 0.8s;
-       -o-transition-duration: 0.8s;
-          transition-duration: 0.8s;
-}
-
-.isotope {
-  -webkit-transition-property: height, width;
-     -moz-transition-property: height, width;
-      -ms-transition-property: height, width;
-       -o-transition-property: height, width;
-          transition-property: height, width;
-}
-
-.isotope .isotope-item {
-  -webkit-transition-property: -webkit-transform, opacity;
-     -moz-transition-property:    -moz-transform, opacity;
-      -ms-transition-property:     -ms-transform, opacity;
-       -o-transition-property:      -o-transform, opacity;
-          transition-property:         transform, opacity;
-}
-
-/**** disabling Isotope CSS3 transitions ****/
-
-.isotope.no-transition,
-.isotope.no-transition .isotope-item,
-.isotope .isotope-item.no-transition {
-  -webkit-transition-duration: 0s;
-     -moz-transition-duration: 0s;
-      -ms-transition-duration: 0s;
-       -o-transition-duration: 0s;
-          transition-duration: 0s;
-}
-
-/* End: Recommended Isotope styles */
-
-#wrapper
-{
-  max-width: 60em; /* 960 px */
-  margin: 0 auto;
-}
-#list {
-  width: 100%;
-}
-.item {
-  /*margin: 5px 1%;*/
-  margin-bottom: 0.5em;
-  -webkit-transition-property: height, width;
-   -moz-transition-property: height, width;
-    -ms-transition-property: height, width;
-     -o-transition-property: height, width;
-        transition-property: height, width;
-  width: 19.5em;
-  height: 19.5em;
-  background: #ccc;
-}
-.item.tall {
-  height: 39.5em;
-  -webkit-transition-property: height, width;
-   -moz-transition-property: height, width;
-    -ms-transition-property: height, width;
-     -o-transition-property: height, width;
-        transition-property: height, width;
-}
-.item.wide {
-  width: 39.5em;
-}
-</style>
-
 <div id="wrapper">
-  <div id="list">
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
+  <div id="grid">
+    <div class="item">
+      <div class="uc-container">
+        <div class="uc-initial-content">
+          <img src="/images/headshot.jpg" alt="image01" />
+          <span class="icon-eye"></span>
+        </div>
+        <div class="uc-final-content">
+          <img src="/images/headshot.jpg" alt="image01-large" />
+          <div class="title"><h4>BBC Homepage</h4> Lead Developer <a href="http://bbc.co.uk" class="icon-link"></a></div>
+          <span class="icon-cancel"></span>
+        </div>
+      </div><!-- / uc-container -->
+    </div>
+    <div class="item">
+          <div class="uc-container">
+        <div class="uc-initial-content">
+          <img src="/images/headshot.jpg" alt="image01" />
+          <span class="icon-eye"></span>
+        </div>
+        <div class="uc-final-content">
+          <img src="/images/headshot.jpg" alt="image01-large" />
+          <div class="title"><h4>BBC Homepage</h4> Lead Developer <a href="http://bbc.co.uk" class="icon-link"></a></div>
+          <span class="icon-cancel"></span>
+        </div>
+      </div><!-- / uc-container -->
+    </div>
+    <div class="item">
+      <div class="uc-container">
+        <div class="uc-initial-content">
+          <img src="/images/headshot.jpg" alt="image01" />
+          <span class="icon-eye"></span>
+        </div>
+        <div class="uc-final-content">
+          <img src="/images/headshot.jpg" alt="image01-large" />
+          <div class="title"><h4>BBC Homepage</h4> Lead Developer <a href="http://bbc.co.uk" class="icon-link"></a></div>
+          <span class="icon-cancel"></span>
+        </div>
+      </div><!-- / uc-container -->
+    </div>
+    <div class="item">
+      <div class="uc-container">
+        <div class="uc-initial-content">
+          <img src="/images/headshot.jpg" alt="image01" />
+          <span class="icon-eye"></span>
+        </div>
+        <div class="uc-final-content">
+          <img src="/images/headshot.jpg" alt="image01-large" />
+          <div class="title"><h4>BBC Homepage</h4> Lead Developer <a href="http://bbc.co.uk" class="icon-link"></a></div>
+          <span class="icon-cancel"></span>
+        </div>
+      </div><!-- / uc-container -->
+    </div>
+    <div class="item">
+        <div class="uc-container">
+        <div class="uc-initial-content">
+          <img src="/images/headshot.jpg" alt="image01" />
+          <span class="icon-eye"></span>
+        </div>
+        <div class="uc-final-content">
+          <img src="/images/headshot.jpg" alt="image01-large" />
+          <div class="title"><h4>BBC Homepage</h4> Lead Developer <a href="http://bbc.co.uk" class="icon-link"></a></div>
+          <span class="icon-cancel"></span>
+        </div>
+      </div><!-- / uc-container -->
+    </div>
+    <div class="item">
+        <div class="uc-container">
+        <div class="uc-initial-content">
+          <img src="/images/headshot.jpg" alt="image01" />
+          <span class="icon-eye"></span>
+        </div>
+        <div class="uc-final-content">
+          <img src="/images/headshot.jpg" alt="image01-large" />
+          <div class="title"><h4>BBC Homepage</h4> Lead Developer <a href="http://bbc.co.uk" class="icon-link"></a></div>
+          <span class="icon-cancel"></span>
+        </div>
+      </div><!-- / uc-container -->
+    </div>
   </div>
 </div>
 
 <%= yield %>
 
 <script>
-var $container = $('#list')
+var $grid = $('#grid')
 // initialize Isotope
-$container.isotope({
+$grid.isotope({
+  containerStyle: { overflow: 'visible', position: 'relative'},
   itemSelector : '.item',
   // options...
   resizable: false, // disable normal resizing
   // set columnWidth to a percentage of container width
-  masonry: { columnWidth: $container.width() / 3 }//,
+  masonry: { columnWidth: $grid.width() / 3 }//,
   // getSortData : {
   //   symbol : function( $elem ) {
   //     return $elem.attr('data-symbol');
@@ -142,29 +128,69 @@ $container.isotope({
 
 // update columnWidth on window resize
 $(window).smartresize(function(){
-  $container.isotope({
+  $grid.isotope({
     // update columnWidth to a percentage of container width
-    masonry: { columnWidth: $container.width() / 3 }
+    masonry: { columnWidth: $grid.width() / 3 }
   });
 });
 
-$container.delegate( '.item', 'click', function(){
-  var duration = 500;
-  $('.active').toggleClass('active').animate({
-    width: "19.5em",
-    height: "19.5em"
-  }, duration);
-  $(this).toggleClass('active').animate({
+// say we want to have only one item opened at one moment
+var opened = false;
+
+$grid.find('.uc-container').each(function(i) {
+  var $item = $(this), direction;
+  // switch( i ) {
+  //   case 0 : direction = ['right','bottom']; break;
+  //   case 1 : direction = ['left','bottom']; break;
+  //   case 2 : direction = ['right','top']; break;
+  //   case 3 : direction = ['left','top']; break;
+  // }
+  direction = ['right','bottom'];
+  var pfold = $item.pfold( {
+    folddirection : direction,
+    speed : 600,
+    onEndFolding : function() { opened = false; },
+  });
+  // $item.find( 'span.icon-eye' ).on( 'click', function() {
+  //   console.log("Hi");
+  //   if( !opened ) {
+  //     opened = true;
+  //     pfold.unfold();
+  //   }
+  // } ).end().find( 'span.icon-cancel' ).on( 'click', function() {
+  //   pfold.fold();
+  // });
+});
+
+$grid.delegate( '.item', 'click', function(){
+  var duration = 300;
+  var $active = $('.active');
+  var $this = $(this);
+
+  if($this.is($active)) {
+    return;
+  } else {
+    var pfold = $active.find('.uc-container').data('pfold');
+    if(pfold) {
+      pfold.fold();
+    }
+    $active.toggleClass('active').animate({
+      width: "19.5em",
+      height: "19.5em"
+    }, duration, function() {
+      // $grid.isotope('reLayout')
+    });
+  }
+
+  $this.toggleClass('active').animate({
     width: "39.5em",
     height: "39.5em"
   }, duration, function() {
-    // Animation complete.
-    $container.isotope('reLayout')
-  });;
-
-
-
-  // $container.isotope('reLayout');
+    $grid.isotope('reLayout');
+    setTimeout(function() {
+      $this.find('.uc-container').data('pfold').unfold();
+    }, 300)
+  });
 });
 
 </script>

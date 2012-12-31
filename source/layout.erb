@@ -16,7 +16,7 @@
 </head>
 <body class="<%= current_page.data.scheme || 'black' %>">
 
-<header class="page">
+<header class="page"<%= "style=\"background-image:url(#{current_page.data.hero_bg_img_url});\"" if current_page.data.hero_bg_img_url %>>
   <%= partial "partials/_nav" %>
   <%= yield_content :header %>
 </header>
