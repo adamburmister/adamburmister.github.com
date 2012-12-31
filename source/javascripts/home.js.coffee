@@ -4,7 +4,7 @@
 $(document).ready ->
   opened = false
   animating = false
-  duration = 300
+  duration = 200
   $grid = $("#grid")
   $grid.isotope
     containerStyle:
