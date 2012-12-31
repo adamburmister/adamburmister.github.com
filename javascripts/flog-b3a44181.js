@@ -1,0 +1,1 @@
+$(document).ready(function(){var e=$("#mobileNavBtn");menu=$("header.page nav ul"),menuHeight=menu.height(),e.click(function(e){e.preventDefault(),menu.slideToggle()}),$(window).resize(function(){var e=$(window).width();e>320&&menu.is(":hidden")&&menu.removeAttr("style")})});

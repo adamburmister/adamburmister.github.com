@@ -1,1 +1,0 @@
-$(document).ready(function(){var e=$(window)});
