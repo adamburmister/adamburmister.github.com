@@ -172,7 +172,6 @@
           width : finalDim.width,
           height : finalDim.height
         } );
-
       $initialContentEl.wrap( '<div class="uc-initial"></div>' );
       $finalContentEl.show().wrap( $( '<div class="uc-final"></div>' ) );
 
