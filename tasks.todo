@@ -1,0 +1,29 @@
+// https://github.com/aziz/PlainTasks for usage ref
+//  ☐ ⌘ + enter or ⌘ + i: new task
+//  ☐ ⌘ + d: toggle task as completed. You can also use your mouse to mark a task a completed. just hold down ⌘ (or ctrl if you're on Windows or Linux) and click the task. Clicking again will toggle the task back to the pending state.
+//  ☐ ⌘ + m: toggle task as cancelled.
+//  ☐ ⌘ + shift + a will archive the done tasks, by removing them from your list and appending them to the bottom of the file under Archive project
+//  ☐ Anything with colon at the end of the line is a project title, you can also nest projects by indenting them.
+//  ☐ You can write plain text as notes or descriptions wherever you want.
+//  ☐ You can add tags using @ sign
+
+Site wide
+ ☐ Ensure EM used on all non-fonts
+ ☐ Ensure REM used on all fonts (re-read http://snook.ca/archives/html_and_css/font-size-with-rem)
+ ☐ Test with IE
+
+Homepage specific
+  ☐ How about an audio tour for each portfolio item?
+  ☐ Hire-me graphic
+    ☐ Hire-me content and email form (Woofu/Google hosted mail form?)
+    ☐ Or a single image with email link underneath? http://tympanus.net/Tutorials/3DHoverEffects/index2.html
+  ☐ Richer footer, link to Twitter and LinkedIn, "Hosted on Github"
+      Lovely contact example at http://lorenzoverzini.com/?page_id=14
+  ☐ Ensure non-3D transform browsers still display nicely
+  ☐ Tile expansion size is off
+  ☐ Make isotype and pfold sizes responsive
+
+Article specific
+  ☐ Make sidebar drop to footer on tablets
+  ☐ Comments using disqus
+

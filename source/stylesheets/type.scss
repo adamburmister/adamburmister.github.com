@@ -2,6 +2,11 @@ abbr {
   font-variant: small-caps;
 }
 
+.inline-tip {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
 h1,
 h2,
 h3,

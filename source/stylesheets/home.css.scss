@@ -60,12 +60,13 @@
   max-width: 60em; /* 960 px */
   margin: 0 auto;
 
-  h2 {
+  .bio {
     font-size: 1.9rem;
     text-align: center;
+    line-height: $base-line-height;
     margin: 0 0 2em 0;
     padding: 0;
-    color: #777;
+    color: #484236;
   }
 }
 #list {
