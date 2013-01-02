@@ -6,6 +6,7 @@
 
 .isotope-item {
   z-index: 2;
+  float: left;
 }
 
 .isotope-hidden.isotope-item {
@@ -378,20 +379,27 @@
     .title {
         position: absolute;
         background: rgba(0,0,0,0.7);
-        bottom: 5px;
+        bottom: 0;
         left: 5px;
-        right: 5px;
+        right: 0;
         padding: 10px;
         color: #fff;
         // font-size: 12px;
         // line-height: 16px;
         // font-weight: bold;
-    }
+        h4, h5 {
+          margin: 0;
+          color: #fff;
+          font-family: "Lato";
+          font-weight: 700;
 
-    .title h4 {
-        color: #aaa;
-        margin: 0;
-        color: #fff;
+          .icon-link-ext {
+            float: right;
+            font-size: 1.5em;
+            border: 0;
+            color: #fff;
+          }
+        }
     }
 
     .icon-link {

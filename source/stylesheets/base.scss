@@ -20,6 +20,10 @@ body {
   background: $color-flog-lightgray;
 }
 
+.hidden {
+  display: none;
+}
+
 a {
   @include transition(color .2s);
 }
