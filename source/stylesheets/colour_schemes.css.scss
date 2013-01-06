@@ -20,7 +20,7 @@ body {
     }
   }
 
-  &, &.dark {
+  & {
     header.page {
       // background-color: $color-flog-gray;
       color: #923e2b;
@@ -41,6 +41,10 @@ body {
 
   &.orange {
     header.page {
+      .hero {
+        color: #923e2b;
+      }
+      color: #923e2b;
       color: $color-flog-orange;
       a.active {
         border-color: $color-flog-orange;
@@ -57,12 +61,24 @@ body {
     }
   }
 
-  &.white {
-  	header.page {
-      color: #fff;
-      a.active {
-        border-color: #fff;
+  &.dark {
+    header.page {
+      $transparentWhite: rgba(255,255,255,0.7);
+
+      background: #333 url(/images/article/bg/dark_wood.png);
+      background-size: auto;
+      color: white;
+      color: $transparentWhite;
+      a {
+        color: white;
+        color: $transparentWhite;
       }
-  	}
+      a.active {
+        color: white;
+        color: $transparentWhite;
+        border-color: $transparentWhite;
+      }
+    }
   }
+
 }

@@ -13,25 +13,25 @@ header.page {
 }
 
 header.page {
-  min-height: 40rem;
+  min-height: 40em;
   background: $color-flog-gray url() no-repeat 50% 0%;
   background-size: cover;
 
   &:before {
     content: '';
     width: $shadow-width;
-    height: 20rem;
+    height: 20em;
     position: absolute;
-    bottom: -11.9rem;
+    bottom: -11.9em;
     left: 0;
     z-index: 1;
     @include border-radius(10px);
     background-color: $shadow-color;
-    @include box-shadow(-1rem 0 3rem 0.5rem $shadow-color);
+    @include box-shadow(-1em 0 3em 0.5em $shadow-color);
   }
 
   .hero {
-    $article-header-padding: 4rem;
+    $article-header-padding: 2em;
     padding-top: $article-header-padding;
     padding-bottom: $article-header-padding;
     font-family: Lato;
@@ -49,12 +49,12 @@ header.page {
       font-family: $base-font-family;
       font-size: 3rem;
       font-weight: 400;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
+      margin-top: 0.2em;
+      margin-bottom: 0.3em;
     }
     p {
       font-style: italic;
-      margin: 0 0 1rem 0;
+      margin: 0 0 1em 0;
       font-size: 1.5rem;
     }
   }
@@ -73,15 +73,15 @@ header.page {
     .post {
       float: left;
       width: $shadow-width;
-      @include box-shadow(0 -0.4em 0.5rem rgba(0,0,0,0.1));
+      @include box-shadow(0 -0.4em 0.5em rgba(0,0,0,0.1));
       margin: 0;
       // @include span-columns(8,12);
       position: relative;
-      margin-top: -8rem;
+      margin-top: -8em;
       background-color: #fff;
-      @include border-radius(0 10px);
+      @include border-radius(0 10px 10px 0);
       border-top: 5px solid $color-flog-orange;
-      padding: 5rem 0;
+      padding: 5em 0;
       z-index: 2;
 
       h1,h2,h3,h4,h5,h6 {
@@ -100,8 +100,8 @@ header.page {
           @include pull(1);
           @include post(-1);
           // @include span-columns(18,12);
-          margin-top: 2rem;
-          margin-bottom: 2rem;
+          margin-top: 2em;
+          margin-bottom: 2em;
           // margin-left: -12%;
           // margin-right: -12%;
           // background: red;
@@ -113,7 +113,7 @@ header.page {
       width: 25%;
       float: left;
       position: relative;
-      padding: 2rem 0;
+      padding: 2em 0;
       font-weight: 300;
 
       aside {
@@ -133,18 +133,40 @@ header.page {
           margin-top: 3em;
         }
         p {
-          margin-bottom: 1rem;
+          margin-bottom: 1em;
           text-align: justify;
         }
         img.headshot {
           position: absolute;
-          margin-top: -6rem;
-          width: 8rem;
-          height: 8rem;
-          @include border-radius(10rem);
+          margin-top: -6em;
+          width: 8em;
+          height: 8em;
+          @include border-radius(10em);
           background: url(/images/headshot.jpg) no-repeat;
           @include box-shadow(0 -10px 15px rgba(0, 0, 0, .2), 0 0 5px rgba(0, 0, 0, .2));
         }
+      }
+    }
+  }
+
+  footer {
+    section {
+      margin-top: 3em;
+      margin-bottom: 3em;
+      border-top: 3px solid rgba(0,0,0,0.1);
+      
+      > :first-child {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        font-family: "Lato", "Helvetica", sans-serif;
+        color: rgba(0,0,0,0.2);
+        margin: 0.5em 0 2em 0;
+        font-weight: 900;
+      }
+    }
+    .recent-articles.listing {
+      .article-title {
+        font-size: 1.5rem;
       }
     }
   }

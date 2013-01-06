@@ -167,12 +167,22 @@ header.page {
 #main {
 
   .listing {
-    h2 {
+    .article-title {
       margin: 0 0 1em 0;
-      font-size: 2rem;
+      padding: 0 0 1em 0;
+      font-size: 1.5rem;
+      border-bottom: 1px solid rgba(0,0,0,0.2);
 
+      a {
+        border-bottom: 0;
+      }
       span {
-        font-size: 0.5em;
+        font-size: 1rem;
+        line-height: 2em;
+        float: right;
+        width: 10em;
+        text-align: right;
+        color: rgba(0,0,0,0.5);
       }
     }
   }
@@ -188,6 +198,9 @@ header.page {
       text-align: center;
     }
     .copyright {
+      border-top: 3px solid rgba(0,0,0,0.1);
+      margin-top: 2em;
+      padding-top: 1em;
       text-align: center;
       color: rgba(0,0,0,0.3);
     }

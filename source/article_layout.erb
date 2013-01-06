@@ -24,6 +24,7 @@
       <aside>
         <img src="/images/headshot.jpg" alt="It's me!" class="circle headshot" />
         <h3>Adam Burmister.</h3>
+        <p>Born naked and unable to fend for himself, I managed to overcome these obstacles to achieve gainful employment as a web/software engineer.</p>
         <p>I like to think of myself as a MacGyver of tech startups. Give me a random collection of ideas and technologies and I'll whip up a hang glider with rocket launchers. Or a single-page-web-app. Whatever.</p>
 
         <h3>Elsewhere.</h3>
@@ -36,6 +37,25 @@
   </article>
 
   <footer class="elastic">
+    <section class="comments">
+      <h3>Comments</h3>
+      <p>I'm still deciding if I want to allow commenting on my articles.<br>If you want to discuss a post's content I suggest using a forum like <a href="http://news.ycombinator.com">HackerNews</a>.</p>
+    </section>
+
+    <section class="recent-articles listing">
+      <h3>Recent articles&hellip;</h3>
+
+      <ol class="unstyled">
+        <% blog.articles[0...10].each do |article| %>
+          <li>
+            <h4 class="article-title">
+              <a href="<%= article.url %>"><%= article.title %></a> <span><%= article.date.strftime('%b %e') %></span>
+            </h4>
+          </li>
+        <% end %>
+      </ol>
+    </section>
+
     <!-- <nav class="content">
       <a href="#">Previous Post</a> / <a href="#">Next Post</a>
     </nav> -->

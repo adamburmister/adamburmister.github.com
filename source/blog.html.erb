@@ -6,25 +6,24 @@ title: Blog entries
 ---
 
 <div class="elastic listing">
+  <ol class="unstyled">
+  <% page_articles.each_with_index do |article, i| %>
+    <li>
+      <h2 class="article-title"><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></h2>
+    </li>
+    <!-- <p><%#= article.summary %></p> -->
+  <% end %>
+  </ol>
 
-<ol class="unstyled">
-<% page_articles.each_with_index do |article, i| %>
-  <li>
-    <h2><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></h2>
-  </li>
-  <!-- <p><%#= article.summary %></p> -->
-<% end %>
-</ol>
-
-<% if paginate %>
-  <% if num_pages > 1 %>
-    <p>Page <%= page_number %> of <%= num_pages %></p>
+  <% if paginate %>
+    <% if num_pages > 1 %>
+      <p>Page <%= page_number %> of <%= num_pages %></p>
+    <% end %>
+    <% if prev_page %>
+      <p><%= link_to 'Previous page', prev_page %></p>
+    <% end %>
+    <% if next_page %>
+      <p><%= link_to 'Next page', next_page %></p>
+    <% end %>
   <% end %>
-  <% if prev_page %>
-    <p><%= link_to 'Previous page', prev_page %></p>
-  <% end %>
-  <% if next_page %>
-    <p><%= link_to 'Next page', next_page %></p>
-  <% end %>
-<% end %>
 </div>
