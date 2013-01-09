@@ -1,8 +1,9 @@
 <% content_for :head_javascript do %>
-<%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js", "home" %>
+<%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js", "home", "lib/jquery.hoverfold.js" %>
 <% end %>
 <% content_for :head_stylesheet do %>
 <%= stylesheet_link_tag "home" %>
+<%= stylesheet_link_tag "lib/hoverfold/style_common", "lib/hoverfold/style2" %>
 <% end %>
 
 <% content_for :header do %>
@@ -112,7 +113,15 @@
       </div>
     </div>
 
-    <div class="item hireme">
+    <div class="non-resizable item foldable hireme">
+      <div class="view">
+        <div class="view-back">
+          <a href="mailto:adam.burmister@gmail.com?subject=Working+together"><i class="icon-email"></i></a>
+          <a href="https://twitter.com/adamburmister"><i class="icon-twitter"></i></a>
+        </div>
+        <img src="/images/home/hire/thumb.png" alt="Hire me" class="full" />
+      </div>
+        <!-- 
       <div class="uc-container">
         <div class="uc-initial-content">
           <img src="/images/home/hire/thumb.png" alt="Hire me" class="full" />
@@ -128,7 +137,7 @@
           <p>Please email for more information.</p>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 
   <footer class="elastic">
@@ -139,5 +148,22 @@
     </div>
   </footer>
 </div>
+
+<script> 
+      
+$('#grid').hoverfold();
+
+//   Modernizr.load({
+//     test: Modernizr.csstransforms3d && Modernizr.csstransitions,
+//     yep : ['javascripts/lib/jquery.hoverfold.js'],
+//     nope: ['stylesheets/lib/hoverfold/style_common'],
+//     callback : function( url, result, key ) {
+//       if( url === 'javascripts/lib/jquery.hoverfold.js' ) {
+//         $('.foldable').hoverfold();
+//       }
+//     }
+//   });
+    
+</script>
 
 <% end %>

@@ -43,8 +43,6 @@ $(document).ready ->
     $grid.isotope masonry:
       columnWidth: $grid.width() / 3
 
-
-
   # say we want to have only one item opened at one moment
   $grid.find(".uc-container").each (i) ->
     direction = ["right", "bottom"]
@@ -56,7 +54,8 @@ $(document).ready ->
     )
 
   $grid.delegate ".item", "click", ->
-    return  if animating
+    return if animating
+    return if $(@).hasClass('non-resizable ')
     $this = $(this)
     $active = $(".active")
     activeClosingDelay = 0
