@@ -1,16 +1,14 @@
 <% content_for :head_javascript do %>
-<%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js", "home", "lib/jquery.hoverfold.js" %>
+<%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js", "home" %>
 <% end %>
 <% content_for :head_stylesheet do %>
-<%= stylesheet_link_tag "home" %>
-<%= stylesheet_link_tag "lib/hoverfold/style_common", "lib/hoverfold/style2" %>
+<%= stylesheet_link_tag "home", "lib/flip-card" %>
 <% end %>
 
 <% content_for :header do %>
 <% end %>
 
 <% wrap_layout :layout do %>
-
 <div id="wrapper">
   <h2 class="bio">
     <span lang="mi" class="inline-tip" title="That's a Māori greeting, which us Kiwi's use as a friendly hello">Kia ora</span>,
@@ -32,6 +30,8 @@
           <div class="title">
             <h4>Xero (application and homepage) <a href="http://www.xero.com" class="icon-link-ext"><span class="hidden">visit</span></a></h4>
             <h5>Senior frontend engineer</h5>
+            <p>Xero is Webby Award winning Online Accounting Software.</p>
+            <p>As a pre-IPO employee (dev hire #4) I had input into frontend engineering practices, backend accounting system and marketing website development.</p>
           </div>
         </div>
       </div>
@@ -51,6 +51,8 @@
           <div class="title">
             <h4>BBC Homepage <a href="http://www.bbc.co.uk" class="icon-link-ext"><span class="hidden">visit</span></a></h4>
             <h5>Lead Developer</h5>
+            <p>I was honoured to have the chance to work on the largest UK website.</p>
+            <p>Brought in to inject a startup mentality to the BBC Public Service, I worked to re-architect a legacy CMS to a modulare, reusable, modern architecture, and lead a development team of 7.</p>
           </div>
         </div>
       </div>
@@ -70,6 +72,8 @@
           <div class="title">
             <h4>BackChat.io</h4>
             <h5>Founder, Product Development &amp; Engineering</h5>
+            <p>BackChat.io provides real-time message filtering as a service. Collect, filter, enhance and route messages from a wide range of real-time data sources.</p>
+            <p>As my first startup it's given me a wide range of skills: product conception, development, fund raising, marketing, sales, large contract negotiations, hiring, firing&hellip; every skill within the entrepreneurial sphere.</p>
           </div>
         </div>
       </div>
@@ -89,6 +93,8 @@
           <div class="title">
             <h4>Seneca.io <a href="http://www.seneca.io" class="icon-link-ext"><span class="hidden">visit</span></a></h4>
             <h5>Founder and CTO</h5>
+            <p>Seneca provides startup investment insights through better investment reporting.</p>
+            <p>We help investors and startups communicate; saving time, money and energy, so startups can get back to work and ensures investors have the best decision making information available.</p>
           </div>
         </div>
       </div>
@@ -108,62 +114,18 @@
           <div class="title">
             <h4>IronRuby in Action</h4>
             <h5>Co-author</h5>
+            <p>I helped write a book! Crazy, right?</p>
+            <p>While the ebook was released, we never got our print copies as Microsoft cancelled their sponsorship of the IronRuby project, and the publisher decided to not do the print run.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="non-resizable item foldable hireme">
-      <div class="view">
-        <div class="view-back">
-          <a href="mailto:adam.burmister@gmail.com?subject=Working+together"><i class="icon-email"></i></a>
-          <a href="https://twitter.com/adamburmister"><i class="icon-twitter"></i></a>
-        </div>
-        <img src="/images/home/hire/thumb.png" alt="Hire me" class="full" />
-      </div>
-        <!-- 
-      <div class="uc-container">
-        <div class="uc-initial-content">
-          <img src="/images/home/hire/thumb.png" alt="Hire me" class="full" />
-          <span class="zoom">
-            <span class="icon-search"></span>
-            <small>Looking to hire me?</small>
-          </span>
-        </div>
-        <div class="uc-final-content">
-          <img src="/images/headshot.jpg" alt="Adam Burmister" />
-          <h3>Hi, I'm Adam Burmister</h3>
-          <p>I'm available for hire for the following projects:</p>
-          <p>Please email for more information.</p>
-        </div>
-      </div>
-    </div> -->
-  </div>
-
-  <footer class="elastic">
-    <div class="copyright">
-      <small>
-        &copy; <%= Date.today.year %> Adam Burmister
-      </small>
+    <div class="non-resizable item hireme">
+      <a href="mailto:adam.burmister@gmail.com?subject=Working+together" title="Email me">
+        <img src="/images/home/hire/thumb.png" alt="Hire me" />
+      </a>
     </div>
-  </footer>
+  </div>
 </div>
-
-<script> 
-      
-$('#grid').hoverfold();
-
-//   Modernizr.load({
-//     test: Modernizr.csstransforms3d && Modernizr.csstransitions,
-//     yep : ['javascripts/lib/jquery.hoverfold.js'],
-//     nope: ['stylesheets/lib/hoverfold/style_common'],
-//     callback : function( url, result, key ) {
-//       if( url === 'javascripts/lib/jquery.hoverfold.js' ) {
-//         $('.foldable').hoverfold();
-//       }
-//     }
-//   });
-    
-</script>
-
 <% end %>

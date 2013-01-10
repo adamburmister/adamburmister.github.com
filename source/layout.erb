@@ -24,6 +24,19 @@
 <%= yield %>
 </div>
 
+<footer class="page elastic">
+  <ul class="links">
+    <li><a href="https://linkedin.com/in/adamburmister"><i class="icon-linkedin-rect"></i><span class="hidden">LinkedIn</span></a></li>
+    <li><a href="https://github.com/adamburmister"><i class="icon-github"></i><span class="hidden">Github</span></a></li>
+    <li><a href="https://twitter.com/adamburmister"><i class="icon-twitter"></i><span class="hidden">Twitter @adamburmister</span></a></li>
+  </ul>
+  <div class="copyright">
+    <small>
+      &copy; <%= Date.today.year %> Adam Burmister
+    </small>
+  </div>
+</footer>
+
 <%= yield_content :footer_javascript %>
 </body>
 </html>

@@ -55,7 +55,7 @@ $(document).ready ->
 
   $grid.delegate ".item", "click", ->
     return if animating
-    return if $(@).hasClass('non-resizable ')
+    return if $(@).hasClass('non-resizable')
     $this = $(this)
     $active = $(".active")
     activeClosingDelay = 0

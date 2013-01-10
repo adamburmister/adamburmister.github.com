@@ -1,0 +1,64 @@
+@import "compass";
+
+$default-transition-duration: 500ms;
+$perspective: 900;
+
+.flip-card {
+  display: block;
+  position: relative;
+  z-index: 1000;
+  width: 312px;
+  height: 312px;
+
+  .card-front,
+  .card-back {
+    @include backface-visibility(hidden);
+    @include single-transition(transform);
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+  .card-front {
+    @include transform3d(perspective($perspective) rotateY(0));
+    z-index: 900;
+  }
+  .card-back {
+    @include rotateY(-180deg); //Using rotate instead of transform prevents the back of the card from flipping on page load because transition is only targeting transform. Super sweet.
+     z-index: 800;
+  }
+  &:hover {
+    .card-front {
+      @include transform(rotateY(180deg)); //No 3D fallback
+      @include transform3d(perspective($perspective) rotateY(180deg));
+    }
+    .card-back {
+      z-index: 950; //No transform fallback
+      @include transform(rotateY(0deg)); //No 3D fallback
+      @include transform3d(perspective($perspective) rotateY(0deg));
+    }
+  }
+}
+
+.flip-card {
+  cursor: pointer;
+  float: left;
+
+  .card-front,
+  .card-back {
+    // @include border-radius(5px);
+    // @include box-shadow(1px 1px 2px rgba(darken(#1B8CE8, 20%), .8));
+    // @include box-sizing(border-box);
+    // border: 1px solid darken(#1B8CE8, 40%);
+    // padding: 40px 0;
+  }
+  .card-front {
+    // @include box-sizing(border-box);
+    // background-color: #499bea; // Old browsers
+    // @include filter-gradient(#499bea, #207ce5, vertical);
+    // @include background-image(linear-gradient(top,  #499bea 0%,#207ce5 100%));
+  }
+  .card-back {
+
+  }
+}

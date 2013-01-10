@@ -56,7 +56,7 @@
     line-height: $base-line-height;
     margin: 0 0 2em 0;
     padding: 0;
-    color: #484236;
+    color: $color-body-text;
   }
 }
 #list {
@@ -365,6 +365,11 @@
             color: #fff;
           }
         }
+
+        p {
+          font-size: 0.8rem;
+          margin-bottom: 0;
+        }
     }
 
     // .icon-link {
@@ -403,5 +408,16 @@
 
     .uc-current .uc-container{
 
+    }
+
+    .hireme {
+      background-color: #ced5da;
+      a {
+        border-bottom: 0;
+        float: left;
+        &:hover {
+          background: none;
+        }
+      }
     }
 }
