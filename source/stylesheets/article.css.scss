@@ -150,11 +150,17 @@ header.page {
   }
 
   footer {
+    clear: both;
+    // padding-bottom: 3rem;
+    padding-top: 1rem;
+    margin-top: 1rem;;
+    // font-family: "Lato", "Helvetica", sans-serif;
+
     section {
       margin-top: 3em;
       margin-bottom: 3em;
       border-top: 3px solid rgba(0,0,0,0.1);
-      
+
       > :first-child {
         font-size: 0.8rem;
         text-transform: uppercase;
