@@ -24,7 +24,7 @@ activate :blog do |blog|
   # blog.default_extension = ".markdown"
 
   blog.tag_template = "tag.html"
-  # blog.calendar_template = "calendar.html"
+  blog.calendar_template = "calendar.html"
 
   blog.paginate = true
   blog.per_page = 1
@@ -77,8 +77,6 @@ activate :automatic_image_sizes
 
 activate :directory_indexes
 
-activate :favicon_maker
-
 # Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper
@@ -108,6 +106,12 @@ configure :build do
   activate :minify_javascript
 
   activate :gzip
+
+  activate :favicon_maker
+
+  activate :automatic_image_sizes
+
+  activate :directory_indexes
 
   # Enable cache buster
   # activate :cache_buster
