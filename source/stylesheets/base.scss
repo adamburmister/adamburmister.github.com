@@ -160,14 +160,14 @@ header.page {
         }
       }
 
-      &.active {
-        h1 {
-          color: $color-flog-orange;
-          &:before {
-            border-color: $color-flog-orange;
-          }
-        }
-      }
+      // &.active {
+      //   h1 {
+      //     color: $color-flog-orange;
+      //     &:before {
+      //       border-color: $color-flog-orange;
+      //     }
+      //   }
+      // }
     }
 
     ul {
