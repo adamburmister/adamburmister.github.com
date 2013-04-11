@@ -57,7 +57,7 @@ $(document).ready ->
     return if animating
     return if $(@).hasClass('non-resizable')
     $this = $(this)
-    $active = $(".active")
+    $active = $grid.find(".active")
     activeClosingDelay = 0
     animating = true # flag as working
     if $this.is($active)
