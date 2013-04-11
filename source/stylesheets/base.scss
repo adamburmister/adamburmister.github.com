@@ -74,10 +74,10 @@ ol, ul {
 header.page {
   $site-header-padding: 4rem;// $base-line-height * 2;
   position: relative;
-  @include box-shadow(0 0 10px rgba(255,255,255,0.2));
+  //@include box-shadow(0 0 10px rgba(255,255,255,0.2));
 
   a {
-    color: $color-flog-orange;
+    color: $color-flog-darkgray;
     // text-shadow: 0 0 8px rgba(0,0,0,.5);
     text-decoration: none;
     text-transform: uppercase;
@@ -91,42 +91,83 @@ header.page {
 
     &:hover {
       color: #000;
+      text-decoration: underline;
     }
   }
 
   nav {
-    $logo-size: 4rem;
+    $logo-size: 54px;
     $logo-padding: 0.5rem;
     padding-top: $site-header-padding; // space out from the top of the page
     padding-bottom: $site-header-padding / 2; // space out from the top of the page
 
-    #logo {
+    a#logo {
       float: left;
-
       h1 {
-        font-family: "Cassannet Bold";
         float: left;
+        position: relative;
         width: $logo-size;
         height: $logo-size;
-        line-height: $logo-size;
         margin-top: $logo-padding;
         margin-bottom: 0;
         text-align: center;
         vertical-align: middle;
-        @include border-radius($logo-size);
-        background-color: $color-flog-orange;
-        color: #fff;
-        font-size: 1rem;
-        letter-spacing: 0.05em;
-        text-shadow: 0 0 1px $color-flog-orange;
+        font-size: 0.8rem;
+        letter-spacing: 0;
+
+        i {
+          float: left;
+          font-size: $logo-size;
+        }
+
+        span {
+          float: left;
+          position: absolute;
+          left: $logo-size;
+          letter-spacing: 0.3em;
+          line-height: 2rem;
+          padding: 1rem;
+          @include opacity(0);
+          @include transition(200ms all ease-out);
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          display: block;
+          width: $logo-size;
+          height: $logo-size;
+          border: 2px solid $color-flog-darkgray;
+          @include transition(200ms all ease-in-out);
+          @include border-radius(100px);
+          @include box-sizing(border-box);
+          @include scale(1);
+          @include opacity(0.5);
+        }
       }
 
-      // &:hover {
-        // h1 {
-          // @include scale(1.1);
-          // background-color: $color-flog-orange !important;
-        // }
-      // }
+      h1 {
+        &:hover {
+          color: $color-flog-darkgray;
+          span {
+            @include transition(1000ms 400ms all ease-out);
+            @include opacity(1);
+          }
+        }
+        &:hover:before {
+          @include scale(1.2);
+          @include opacity(1);
+        }
+      }
+
+      &.active {
+        h1 {
+          color: $color-flog-orange;
+          &:before {
+            border-color: $color-flog-orange;
+          }
+        }
+      }
     }
 
     ul {
@@ -201,8 +242,10 @@ footer.page {
     text-align: center;
     li {
       display: inline-block;
+      margin: 0.5rem;
       a {
         font-size: 1.5rem;
+        text-decoration: none;
         color: lighten($color-body-text, 50%);
         &:hover {
           color: $color-body-text;

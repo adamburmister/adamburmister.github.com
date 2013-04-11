@@ -1,84 +1,83 @@
 @import '_variables';
 
 body {
-  // TODO: Write mixin helper for this
-  &.black {
-    header.page {
-      color: #111;
-      #logo {
-        h1 {
-          background-color: #111;
-        }
-      }
-      a {
-        color: #111;
-        &.active {
-          color: #111;
-          border-color: #111;
-        }
-      }
-    }
-  }
+  // // TODO: Write mixin helper for this
+  // &.black {
+  //   header.page {
+  //     color: #111;
+  //     #logo {
+  //       h1 {
+  //       }
+  //     }
+  //     a {
+  //       color: #111;
+  //       &.active {
+  //         color: #111;
+  //         border-color: #111;
+  //       }
+  //     }
+  //   }
+  // }
 
-  & {
-    header.page {
-      // background-color: $color-flog-gray;
-      color: #923e2b;
-      .hero {
-        font-size: 2em;
-        h2 {
-          color: inherit;
-        }
-      }
-      a {
-        color: $color-flog-orange;
-        &.active {
-          border-color: $color-flog-orange;
-        }
-      }
-    }
-  }
+  // & {
+  //   header.page {
+  //     // background-color: $color-flog-gray;
+  //     color: #923e2b;
+  //     .hero {
+  //       font-size: 2em;
+  //       h2 {
+  //         color: inherit;
+  //       }
+  //     }
+  //     a {
+  //       color: $color-flog-orange;
+  //       &.active {
+  //         border-color: $color-flog-orange;
+  //       }
+  //     }
+  //   }
+  // }
 
-  &.orange {
-    header.page {
-      .hero {
-        color: #923e2b;
-      }
-      color: #923e2b;
-      color: $color-flog-orange;
-      a.active {
-        border-color: $color-flog-orange;
-      }
-    }
-  }
+  // &.orange {
+  //   header.page {
+  //     .hero {
+  //       color: #923e2b;
+  //     }
+  //     color: #923e2b;
+  //     color: $color-flog-orange;
+  //     a.active {
+  //       border-color: $color-flog-orange;
+  //     }
+  //   }
+  // }
 
-  &.light {
-    header.page {
-      color: #d0dbcb;
-      a.active {
-        border-color: #d0dbcb;
-      }
-    }
-  }
+  // &.light {
+  //   header.page {
+  //     color: #d0dbcb;
+  //     a.active {
+  //       border-color: #d0dbcb;
+  //     }
+  //   }
+  // }
 
-  &.dark {
-    header.page {
-      $transparentWhite: rgba(255,255,255,0.7);
+  // &.dark {
+  //   header.page {
+  //     $transparentWhite: rgba(255,255,255,0.7);
 
-      background: #333 url(/images/article/bg/dark_wood.png);
-      background-size: auto;
-      color: white;
-      color: $transparentWhite;
-      a {
-        color: white;
-        color: $transparentWhite;
-      }
-      a.active {
-        color: white;
-        color: $transparentWhite;
-        border-color: $transparentWhite;
-      }
-    }
-  }
+  //     background: #333 url(/images/article/bg/dark_wood.png);
+  //     background-size: auto;
+  //     color: white;
+  //     color: $transparentWhite;
+  //     a {
+  //       color: white;
+  //       color: $transparentWhite;
+  //     }
+  //     a.active {
+  //       color: white;
+  //       color: $transparentWhite;
+  //       border-color: $transparentWhite;
+  //     }
+  //   }
+  // }
 
 }
