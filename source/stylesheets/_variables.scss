@@ -1,8 +1,8 @@
 // Dimensions
 $base-font-size: 16px;
-$base-line-height: 1.7;
-$site-header-height: 130px;
-$article-header-height: 400px;
+$base-line-height: 1.5;
+//$site-header-height: 130px;
+//$article-header-height: 400px;
 
 $site-width-max: 1665px;
 
@@ -12,7 +12,7 @@ $color-body-text: #484236;
 $color-flog-orange: #f36747;
 $color-flog-blue: #0C555D;
 $color-flog-gray: #CCDFCC;
-$color-flog-lightgray: #f6f6ef;
+$color-flog-lightgray: lighten(#f6f6ef, 3%);
 
 // Break points
 $break-tablet: 460px;

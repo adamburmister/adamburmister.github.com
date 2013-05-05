@@ -2,60 +2,36 @@
 <%= stylesheet_link_tag "article" %>
 <% end %>
 
-<% content_for :header do %>
-  <% if current_article %>
-  <div class="hero elastic" id="headline">
-    <time><%= current_article.date.strftime "%d %B, %Y" %></time>
-    <h2><%= current_article.title %></h2>
-    <p class="subtitle"><%= current_article.data.subtitle %></p>
-  </div>
-  <% end %>
-<% end %>
-
 <% wrap_layout :layout do %>
-  <article>
-    <div class="post">
-      <section>
-        <%= yield %>
-      </section>
-    </div>
-
-    <div class="sidebar">
-      <aside>
-        <img src="/images/headshot.jpg" alt="It's me!" class="circle headshot" />
-        <h3>Adam Burmister.</h3>
-        <p>Born naked and unable to fend for himself, I managed to overcome these obstacles to achieve gainful employment as a web/software engineer.</p>
-        <p>I like to think of myself as a MacGyver of tech startups. Give me a random collection of ideas and technologies and I'll whip up a hang glider with rocket launchers. Or a single-page-web-app. Whatever.</p>
-
-        <h3>Elsewhere.</h3>
-        <p>I rant at <a href="https://twitter.com/adamburmister">@adamburmister</a>, contribute code at <a href="http://github.com/adamburmister/">Github</a>, and network on <a href="http://www.linkedin.com/in/adamburmister">LinkedIn</a>.</p>
-
-        <h3>Curriculum Vitae.</h3>
-        <p>If you're interested in what I've done you can <a href="/Adam_Burmister-CV.pdf">download my CV</a> or connect on <a href="http://www.linkedin.com/in/adamburmister">LinkedIn</a>.</p>
-      </aside>
-    </div>
+  <article class="post elastic">
+    
+    <% if current_article %>
+    <header class="hero">
+      <h2><%= current_article.title %></h2>
+      <time><%= current_article.date.strftime "%d %B, %Y" %></time>
+    </header>
+    <% end %>
+  
+    <section>
+      <%= yield %>  
+    </section>
+    
   </article>
 
-  <footer class="article elastic">
+  <footer class="post elastic">
 
-    <section class="comments">
-      <h3>Comments</h3>
-      <p>I'm still deciding if I want to allow commenting on my articles.<br>If you want to discuss a post's content I suggest using a forum like <a href="http://news.ycombinator.com">HackerNews</a>.</p>
-    </section>
-
-    <section class="recent-articles listing">
+    <aside class="recent-articles listing">
       <h3>Recent articles&hellip;</h3>
 
       <ol class="unstyled">
         <% blog.articles[0...10].each do |article| %>
           <li>
             <h4 class="article-title">
-              <a href="<%= article.url %>"><%= article.title %></a> <span><%= article.date.strftime('%b %e') %></span>
+              <a href="<%= article.url %>"><%= article.title %></a> <span class="date"><%= article.date.strftime('%b %e') %></span>
             </h4>
           </li>
         <% end %>
       </ol>
-    </section>
 
   </footer>
 <% end %>

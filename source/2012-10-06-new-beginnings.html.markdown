@@ -1,7 +1,6 @@
 ---
 title: New Beginnings
 subtitle: Candy is dandy, but liquor is quicker.
-scheme: dark
 date: 2012-10-06
 tags: work, life
 ---

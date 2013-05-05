@@ -24,6 +24,12 @@ body {
   display: none;
 }
 
+span.fancy {
+  font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
+  font-style: italic;
+  font-weight: normal;
+}
+
 a {
   @include transition(color .2s);
 }
@@ -96,7 +102,7 @@ header.page {
   }
 
   nav {
-    $logo-size: 54px;
+    $logo-size: 70px;
     $logo-padding: 0.5rem;
     padding-top: $site-header-padding; // space out from the top of the page
     padding-bottom: $site-header-padding / 2; // space out from the top of the page
@@ -115,6 +121,14 @@ header.page {
         font-size: 0.8rem;
         letter-spacing: 0;
 
+        img {
+          float: left;
+          width: $logo-size;
+          height: $logo-size;
+          border-radius: 50%;
+          @include box-shadow(0 1px 1px 0 #fff)
+        }
+
         i {
           float: left;
           font-size: $logo-size;
@@ -127,6 +141,7 @@ header.page {
           letter-spacing: 0.3em;
           line-height: 2rem;
           padding: 1rem;
+          white-space: nowrap;
           @include opacity(0);
           @include transition(200ms all ease-out);
         }
@@ -137,7 +152,7 @@ header.page {
           display: block;
           width: $logo-size;
           height: $logo-size;
-          border: 2px solid $color-flog-darkgray;
+          border: 1px solid $color-flog-darkgray;
           @include transition(200ms all ease-in-out);
           @include border-radius(100px);
           @include box-sizing(border-box);
@@ -155,7 +170,8 @@ header.page {
           }
         }
         &:hover:before {
-          @include scale(1.2);
+          border: 2px solid $color-flog-orange;
+          @include scale(1.15);
           @include opacity(1);
         }
       }
@@ -186,39 +202,12 @@ header.page {
           }
         }
 
-      }
-      li:last-child {
-        a {
-          padding-left: 1rem;
+        &:last-child a {
+          padding: 0 1rem;
         }
       }
     }
   }
-}
-
-#main {
-
-  .listing {
-    .article-title {
-      margin: 0 0 1em 0;
-      padding: 0 0 1em 0;
-      font-size: 1.5rem;
-      border-bottom: 1px solid rgba(0,0,0,0.2);
-
-      a {
-        border-bottom: 0;
-      }
-      span {
-        font-size: 1rem;
-        line-height: 2em;
-        float: right;
-        width: 10em;
-        text-align: right;
-        color: rgba(0,0,0,0.5);
-      }
-    }
-  }
-
 }
 
 footer.page {

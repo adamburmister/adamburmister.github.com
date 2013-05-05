@@ -52,10 +52,11 @@
   margin: 0 auto;
 
   .bio {
-    font-size: 1.9rem;
+    font-weight: normal;
+    font-size: 2.4rem;
     text-align: center;
     line-height: $base-line-height;
-    margin: 0 0 2em 0;
+    margin: 0 1rem 2em 1rem;
     padding: 0;
     color: $color-body-text;
   }
@@ -272,13 +273,12 @@
       overflow: hidden;
       font-size: 4rem;
       line-height: 19.5rem;
-      text-shadow: 1px 2px 1px rgba(0,0,0,0.5);
       text-align: center;
-      color: #fff;
-      background: transparentize($color-flog-orange, 0.3);
-      opacity: 0;
+      background: transparentize($color-flog-lightgray, 0.1);
       cursor: pointer;
 
+      @include scale(1);
+      @include opacity(0);
       @include backface-visibility(hidden);
       @include transition(all 0.3s linear);
 
@@ -287,26 +287,21 @@
         bottom: -100%;
         left: 0;
         right: 0;
+        color: $color-flog-blue;
         // display:none;
         font-family: "Lato", "Helvetica", sans-serif;
-        font-style: italic;
-        line-height: 1;
-        font-size: 1rem;
+        //font-style: italic;
+        line-height: 1.5;
+        font-size: 1.2rem;
         margin-top: -5rem;
         padding: 1em;
-        background-color: rgba(0,0,0,0.2);
-        -webkit-font-smoothing: antialiased;
-        -webkit-transition: bottom 0.2s ease;
-        -moz-transition: bottom 0.2s ease-in-out;
-        -ms-transition: bottom 0.2s ease-in-out;
-        -o-transition: bottom 0.2s ease-in-out;
-        transition: bottom 0.2s ease-in-out;
+
+        @include transition(all 0.3s ease-in-out);
       }
 
       &:hover {
         // background: transparentize($color-flog-orange, 0.3);
-        opacity: 1;
-
+        @include opacity(1);
         small {
           // display:block;
           bottom: 0;
@@ -321,18 +316,20 @@
     }
 
     .no-touch .uc-initial-content:hover .zoom {
-        color: rgba(255,255,255,0.8);
-        background: rgba(41,166,170,0.7);
+        //color: rgba(255,255,255,0.8);
+        //background: rgba(41,166,170,0.7);
     }
 
     .uc-initial-content img {
         display: block;
-        width: 19.5em;
-        height: 19.5em;
+        //width: 19.5em;
+        //height: 19.5em;
     }
     .uc-final-content img.full {
-        width: 39.5em;
-        height: 39.5em;
+        // width: 39.5em;
+        // height: 39.5em;
+        // width: 39.5em;
+        // height: 100%;
     }
 
     .title {

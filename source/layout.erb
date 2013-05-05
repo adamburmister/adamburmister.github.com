@@ -2,7 +2,7 @@
 <html>
   <head>
   <meta charset="utf-8">
-  <title><%= current_page.data.title || "Flog" %> | Adam Burmister, Web Superhero in Training</title>
+  <title><%= current_page.data.title || "Burmister.com" %> | Adam Burmister, Web Superhero in Training</title>
   <meta name="description" content="Adam Burmister: Entrepreneur, Developer, Designer in London, owner of a lonely heart">
   <meta name="author" content="Adam Burmister">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,7 +21,7 @@
 </head>
 <body class="<%= current_page.data.scheme || 'black' %>">
 
-<header class="page"<%= "style=\"background-image:url(#{current_page.data.hero_bg_img_url});\"" if current_page.data.hero_bg_img_url %>>
+<header class="page">
 <%= partial "partials/_nav" %>
 <%= yield_content :header %>
 </header>
