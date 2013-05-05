@@ -38,30 +38,6 @@ footer.post {
   border-bottom: 0.4rem solid $color-flog-darkgray;
   padding-top: 2rem;
   margin-top: 3rem;
-
-  .listing {
-    h3 {
-      font-size: 1rem;
-      text-transform: uppercase;
-    }
-    .article-title {
-      margin: 0;
-      padding: 0.5em 0;
-      //font-size: 1.5rem;
-
-      a {
-        border-bottom: 0;
-      }
-      .date {
-        font-size: 1rem;
-        line-height: 2em;
-        //float: right;
-        //width: 10em;
-        text-align: right;
-        //color: rgba(0,0,0,0.5);
-      }
-    }
-  }
 }
 
 // header.page {

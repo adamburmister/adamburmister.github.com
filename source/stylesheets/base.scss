@@ -46,6 +46,34 @@ ol, ul {
   }
 }
 
+.listing {
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+  .article-title {
+    margin: 0;
+    padding: 0.5em 0;
+    //font-size: 1.5rem;
+
+    a {
+      border-bottom: 0;
+    }
+    span {
+      font-size: 1rem;
+      line-height: 2em;
+      //float: right;
+      //width: 10em;
+      text-align: right;
+      //color: rgba(0,0,0,0.5);
+      font-weight: normal;
+    }
+  }
+}
+
 // The mobile nav
 #mobileNavBtn {
   display: none;
