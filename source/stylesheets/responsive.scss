@@ -1,7 +1,11 @@
+@import "variables";
+@import "compass";
+@import "susy";
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen /*and (min-device-width : 320px)*/ and (max-device-width : 480px) {
   body {
-    font-size: 12px;
+    // font-size: 12px;
   }
   #mobileNavBtn {
     display: block;
@@ -49,62 +53,7 @@
 }
 
 @include at-breakpoint(0 768px) {
-  header.page {
-    &:before {
-      display: none;
-    }
-  }
 
-  #main article .post {
-    // @include pull(0);
-    float: none;
-    width: auto;
-    overflow: auto;
-    margin-top: 0;
-    padding: 2rem 0;
-
-    // section {
-    //   @include span-columns(12);
-    //   // @include squish(1,1);
-    //   // margin-left: 0;
-    //   // margin-right: 0;
-    //   max-width: none;
-
-    //   .wide {
-    //     // margin-left: 0;
-    //     // margin-right: 0;
-    //     @include pull(1);
-    //   }
-    // }
-    // h1, h2, h3, h4, h5, h6 {
-    //   margin-left: 0;
-    //   margin-right: 0;
-    //   margin-top: 1em;
-    //   @include span-columns(12);
-    // }
-    // p {
-    //   &.lead {
-    //     &:first-child:first-letter {
-    //       margin: 0;
-    //     }
-    //   }
-    // }
-  }
-  #main article .sidebar, #main article .sidebar aside {
-    float: none;
-    width: auto;
-    max-width: none;
-    overflow: auto;
-  }
-  #main article .sidebar {
-    font-weight: 300;
-    aside {
-      img.headshot  { display: none; }
-      h3 {
-        margin: 1rem 0 0.5rem 0;
-      }
-    }
-  }
 }
 
 @include at-breakpoint(0 640px) {
@@ -145,37 +94,20 @@
         }
       }
     }
-    .hero {
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-    }
   }
-  #main article .post {
-    // @include pull(0);
-    // float: none;
-    // width: auto;
-    // overflow: auto;
-    // margin-top: 0;
-    // padding: 2rem 0;
+  #main article.post {
+    max-width: none;
 
-    section {
-      @include span-columns(12);
-      // @include squish(1,1);
-      // margin-left: 0;
-      // margin-right: 0;
-      max-width: none;
-
-      .wide {
-        // margin-left: 0;
-        // margin-right: 0;
-        @include pull(1);
-      }
-    }
     h1, h2, h3, h4, h5, h6 {
       margin-left: 0;
       margin-right: 0;
       margin-top: 1em;
-      @include span-columns(12);
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    header time {
+      margin: 1rem 0;
     }
     p {
       &.lead {
@@ -185,25 +117,7 @@
       }
     }
   }
-  // #main article .sidebar, #main article .sidebar aside {
-  //   float: none;
-  //   width: auto;
-  //   max-width: none;
-  //   overflow: auto;
-  // }
-  // #main article .sidebar aside {
-  //   img.headshot  { display: none; }
-  //   h3 {
-  //     margin: 1rem 0 0.5rem 0;
-  //   }
-  // }
 }
-
-// @include layout(6) {
-//   .page nav {
-//     background-color: #f00;
-//   }
-// }
 
 @include at-breakpoint(0 320px) {
   body {

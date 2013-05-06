@@ -108,7 +108,6 @@ ol, ul {
 header.page {
   $site-header-padding: 4rem;// $base-line-height * 2;
   position: relative;
-  //@include box-shadow(0 0 10px rgba(255,255,255,0.2));
 
   a {
     color: $color-flog-darkgray;
@@ -172,6 +171,9 @@ header.page {
           white-space: nowrap;
           @include opacity(0);
           @include transition(200ms all ease-out);
+          @include border-radius(50px);
+          background-color: $color-flog-lightgray;
+          z-index: 0;
         }
 
         &:before {
@@ -186,6 +188,7 @@ header.page {
           @include box-sizing(border-box);
           @include scale(1);
           @include opacity(0.5);
+          z-index: 1;
         }
       }
 
@@ -201,6 +204,25 @@ header.page {
           border: 2px solid $color-flog-orange;
           @include scale(1.15);
           @include opacity(1);
+        }
+
+        @include at-breakpoint(0 40rem) {
+          &, img, span {
+            float: none;
+            margin: 0 auto;
+          }
+          &, span {
+            width: auto;
+            height: auto;
+          }
+          span {
+            display: block;
+            position: static;
+            @include opacity(1);
+          }
+          &:before {
+            display: none;
+          }
         }
       }
     }

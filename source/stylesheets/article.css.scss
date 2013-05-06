@@ -5,7 +5,7 @@
 
 .post {
   max-width: 40rem;
-  font-size: 1.1rem;
+  // font-size: 1.1rem;
 
   header {
     //margin-top: 3rem;
@@ -31,6 +31,31 @@
     }
   }
 
+  .wide {
+    margin-left: -13rem;
+    margin-right: -12rem;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  @include at-breakpoint(0 60rem) {
+    .wide {
+      margin-left: -8rem;
+      margin-right: -8rem;
+    }
+  }
+  @include at-breakpoint(0 52rem) {
+    .wide {
+      margin-left: -4rem;
+      margin-right: -4rem;
+    }
+  }
+  @include at-breakpoint(0 46rem) {
+    .wide {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
 }
 
 footer.post {
