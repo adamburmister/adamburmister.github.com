@@ -12,7 +12,7 @@ Time.zone = "GMT"
 
 activate :blog do |blog|
   # blog.prefix = "blog"
-  blog.permalink = "blog/:year/:month/:day/:title"
+  blog.permalink = ":year/:month/:day/:title"
   # blog.sources = "blog/:year-:month-:day-:title.html"
   # blog.taglink = "blog/tags/:tag.html"
   blog.layout = "article_layout"
