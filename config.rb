@@ -115,7 +115,7 @@ configure :build do
   activate :directory_indexes
 
   # Enable cache buster
-  activate :cache_buster
+  # activate :cache_buster
 
   # Use relative URLs
   #activate :relative_assets
@@ -123,6 +123,8 @@ configure :build do
   # Compress PNGs after build
   # First: gem install middleman-smusher
   activate :smusher
+
+  activate :image_optim
 
   # activate :asset_hash
 
