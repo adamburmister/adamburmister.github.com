@@ -15,6 +15,6 @@ gem "middleman-sprockets"
 gem "middleman-syntax"
 
 gem "ruby-prof"
-gem "middleman-favicon-maker"
+gem "middleman-favicon-maker", "~> 3.2"
 
 gem 'rack-google_analytics'
