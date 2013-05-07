@@ -5,64 +5,10 @@
   <id>http://www.flog.co.nz/</id>
   <link href="http://www.flog.co.nz/"/>
   <link href="http://www.flog.co.nz/feed.xml" rel="self"/>
-  <updated>2012-11-13T00:00:00Z</updated>
+  <updated>2012-10-06T00:00:00Z</updated>
   <author>
     <name>Adam Burmister, @adamburmister</name>
   </author>
-  <entry>
-    <title>The Deemed Contract Business Model</title>
-    <link rel="alternate" href="/2012/11/13/deemed-contracts/"/>
-    <id>/2012/11/13/deemed-contracts/</id>
-    <published>2012-11-13T00:00:00Z</published>
-    <updated>2012-11-13T00:00:00Z</updated>
-    <author>
-      <name>Adam Burmister, @adamburmister</name>
-    </author>
-    <summary type="html">&lt;p class="lead"&gt;Since dipping my toes into the entrepreneurial puddle I&amp;rsquo;ve found myself fascinated by business models. A startup, is at it&amp;rsquo;s core, the search for a sustainable business model. The stuff around it - the technology, the value proposition, customer segments - are all just there to support that core search.&lt;/p&gt;
-</summary>
-    <content type="html">&lt;p class="lead"&gt;Since dipping my toes into the entrepreneurial puddle I&amp;rsquo;ve found myself fascinated by business models. A startup, is at it&amp;rsquo;s core, the search for a sustainable business model. The stuff around it - the technology, the value proposition, customer segments - are all just there to support that core search.&lt;/p&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-
-&lt;div class="wide"&gt;
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-&lt;/div&gt;
-
-&lt;h3&gt;H3 Heading&lt;/h3&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo&lt;/p&gt;
-
-&lt;h4&gt;H4 Heading&lt;/h4&gt;
-
-&lt;p&gt;consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-
-&lt;h5&gt;H5 Heading&lt;/h5&gt;
-
-&lt;p&gt;consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-
-&lt;h6&gt;H6 Heading&lt;/h6&gt;
-
-&lt;p&gt;consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-</content>
-  </entry>
   <entry>
     <title>New Beginnings</title>
     <link rel="alternate" href="/2012/10/06/new-beginnings/"/>
@@ -72,32 +18,23 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&g
     <author>
       <name>Adam Burmister, @adamburmister</name>
     </author>
-    <summary type="html">&lt;p&gt;This is an example article. You probably want to delete it and write your own articles!&lt;/p&gt;
-&lt;div class="highlight wide "&gt;&lt;pre&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;my_cool_method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-  &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt;
-&lt;span class="k"&gt;end&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;div class="wide"&gt;This is an example article. You probably want to delete it and write your own articles!&lt;/div&gt;
+    <summary type="html">&lt;p class="lead"&gt;
+  After a few years absence I&amp;rsquo;m pleased to say I&amp;rsquo;m re-releasing a personal online presence.
+  The old site, flog.co.nz, is now dead-pooled, and will be directing users to the new domain, burmister.com.
+&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;So where have I been?&lt;/em&gt; I&amp;#39;ve been busy the past few years doing my own thang; starting up a few companies, seeing some success, some failure, and getting the shit kicked out of me generally (both professionally and personally).&lt;/p&gt;
 </summary>
-    <content type="html">&lt;p&gt;This is an example article. You probably want to delete it and write your own articles!&lt;/p&gt;
-&lt;div class="highlight wide "&gt;&lt;pre&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;my_cool_method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-  &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt;
-&lt;span class="k"&gt;end&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;div class="wide"&gt;This is an example article. You probably want to delete it and write your own articles!&lt;/div&gt;
-&lt;div class="highlight wide "&gt;&lt;pre&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;my_cool_method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-  &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt;
-&lt;span class="k"&gt;end&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This is an example article. You probably want to delete it and write your own articles!&lt;/p&gt;
-&lt;div class="highlight wide "&gt;&lt;pre&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;my_cool_method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-  &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt;
-&lt;span class="k"&gt;end&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This is an example article. You probably want to delete it and write your own articles!&lt;/p&gt;
-&lt;div class="highlight wide "&gt;&lt;pre&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;my_cool_method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-  &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt;
-&lt;span class="k"&gt;end&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content>
+    <content type="html">&lt;p class="lead"&gt;
+  After a few years absence I&amp;rsquo;m pleased to say I&amp;rsquo;m re-releasing a personal online presence.
+  The old site, flog.co.nz, is now dead-pooled, and will be directing users to the new domain, burmister.com.
+&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;So where have I been?&lt;/em&gt; I&amp;#39;ve been busy the past few years doing my own thang; starting up a few companies, seeing some success, some failure, and getting the shit kicked out of me generally (both professionally and personally).&lt;/p&gt;
+
+&lt;p&gt;Through all this trial and tribulation I&amp;#39;ve learnt a lot. 
+&lt;br&gt;
+It&amp;#39;s true: destruction is the birth of creation. So thank you, life. I&amp;#39;m looking forward to sharing some of all I&amp;#39;ve learnt with you soon.&lt;/p&gt;
+</content>
   </entry>
 </feed>
