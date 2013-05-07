@@ -1,40 +1,16 @@
 ---
 title: New Beginnings
-subtitle: Candy is dandy, but liquor is quicker.
 date: 2012-10-06
 tags: work, life
 ---
 
-This is an example article. You probably want to delete it and write your own articles!
+<p class="lead">
+  After a few years absence I'm pleased to say I'm re-releasing a personal online presence.
+  The old site, flog.co.nz, is now dead-pooled, and will be directing users to the new domain, burmister.com.
+</p>
 
-```ruby
-def my_cool_method(message)
-  puts message
-end
-```
+*So where have I been?* I've been busy the past few years doing my own thang; starting up a few companies, seeing some success, some failure, and getting the shit kicked out of me generally (both professionally and personally).
 
-<div class="wide">This is an example article. You probably want to delete it and write your own articles!</div>
-
-```ruby
-def my_cool_method(message)
-  puts message
-end
-```
-
-
-This is an example article. You probably want to delete it and write your own articles!
-
-```ruby
-def my_cool_method(message)
-  puts message
-end
-```
-
-
-This is an example article. You probably want to delete it and write your own articles!
-
-```ruby
-def my_cool_method(message)
-  puts message
-end
-```
+Through all this trial and tribulation I've learnt a lot. 
+<br>
+It's true: destruction is the birth of creation. So thank you, life. I'm looking forward to sharing some of all I've learnt with you soon.
