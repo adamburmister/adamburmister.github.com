@@ -86,7 +86,8 @@ activate :directory_indexes
 
 activate :sprockets
 
-activate :syntax
+activate :syntax,
+         :cssclass => 'highlight wide '
 
 set :css_dir, 'stylesheets'
 
@@ -114,7 +115,7 @@ configure :build do
   activate :directory_indexes
 
   # Enable cache buster
-  # activate :cache_buster
+  activate :cache_buster
 
   # Use relative URLs
   #activate :relative_assets
