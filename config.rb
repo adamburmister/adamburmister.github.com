@@ -89,6 +89,8 @@ activate :sprockets
 activate :syntax,
          :cssclass => 'highlight wide '
 
+activate :favicon_maker
+
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'
@@ -107,8 +109,6 @@ configure :build do
   activate :minify_javascript
 
   activate :gzip
-
-  activate :favicon_maker
 
   activate :automatic_image_sizes
 
