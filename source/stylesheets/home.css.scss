@@ -70,8 +70,9 @@
   width: 100%;
 }
 .item {
+  float: left;
   @include transition-property(height, width);
-  margin-bottom: 0.5em;
+  margin: 0 0.5em 0.5em 0;
   width: 19.5em;
   height: 19.5em;
   overflow: visible !important;

@@ -124,8 +124,6 @@ configure :build do
   # First: gem install middleman-smusher
   activate :smusher
 
-  activate :image_optim
-
   # activate :asset_hash
 
   # Or use a different image path
