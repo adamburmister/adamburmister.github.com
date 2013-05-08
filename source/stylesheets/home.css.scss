@@ -3,7 +3,8 @@
 @import "variables";
 @import "lib/flip-card";
 
-/* Start: Recommended Isotope styles */
+$card-size-thumb: 312px;
+$card-size-full: 632px;
 
 /**** Isotope Filtering ****/
 
@@ -73,8 +74,8 @@
   float: left;
   @include transition-property(height, width);
   margin: 0 0.5em 0.5em 0;
-  width: 19.5em;
-  height: 19.5em;
+  width: $card-size-thumb;
+  height: $card-size-thumb;
   overflow: visible !important;
 
   &.active {
@@ -278,7 +279,7 @@
       height: 100%;
       overflow: hidden;
       font-size: 4rem;
-      line-height: 19.5rem;
+      line-height: $card-size-thumb;
       text-align: center;
       background: transparentize($color-flog-lightgray, 0.1);
       cursor: pointer;
@@ -328,14 +329,12 @@
 
     .uc-initial-content img {
         display: block;
-        //width: 19.5em;
-        //height: 19.5em;
+        width: $card-size-thumb;
+        height: $card-size-thumb;
     }
     .uc-final-content img.full {
-        // width: 39.5em;
-        // height: 39.5em;
-        // width: 39.5em;
-        // height: 100%;
+        width: $card-size-full;
+        height: $card-size-full;
     }
 
     .title {
