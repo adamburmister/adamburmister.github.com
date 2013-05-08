@@ -89,15 +89,18 @@ p {
     // font-family: $base-font-family;
 
     &:first-child:first-letter {
-      @include pull(1);
+      //@include pull(1);
       float: left;
+      // text-align: right;
+      // overflow: visible;
       // color: $color-flog-orange;
       // color: #000;
       font-family: $base-font-family;
       font-weight: bold;
       font-size: 5rem;
       // font-style: italic;
-      line-height: 5.5rem;
+      line-height: 1.1;
+      margin-bottom: -0.1em;
       padding-right: 0.2rem;
     }
   }

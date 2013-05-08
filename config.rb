@@ -89,7 +89,7 @@ activate :sprockets
 activate :syntax,
          :cssclass => 'highlight wide '
 
-activate :favicon_maker
+#activate :favicon_maker
 
 set :css_dir, 'stylesheets'
 

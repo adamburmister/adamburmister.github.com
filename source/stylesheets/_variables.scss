@@ -11,7 +11,7 @@ $color-flog-darkgray: #5b6065;
 $color-body-text: #484236;
 $color-flog-orange: #f36747;
 $color-flog-blue: #0C555D;
-$color-flog-gray: #CCDFCC;
+$color-flog-gray: lighten($color-body-text, 60%); // #CCDFCC;
 $color-flog-lightgray: lighten(#f6f6ef, 3%);
 
 // Break points
