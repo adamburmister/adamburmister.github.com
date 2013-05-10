@@ -1,0 +1,37 @@
+<% content_for :head_stylesheet do %>
+<%= stylesheet_link_tag "article" %>
+<% end %>
+
+<% wrap_layout :layout do %>
+  <article class="post elastic">
+    
+    <% if current_article %>
+    <header class="hero">
+      <h2><%= current_article.title %></h2>
+      <time><%= current_article.date.strftime "%d %B, %Y" %></time>
+    </header>
+    <% end %>
+  
+    <section>
+      <%= yield %>  
+    </section>
+    
+  </article>
+
+  <footer class="post elastic">
+
+    <aside class="recent-articles listing">
+      <h3>Recent articles&hellip;</h3>
+
+      <ol class="unstyled">
+        <% blog.articles[0...10].each do |article| %>
+          <li>
+            <h4 class="article-title">
+              <a href="<%= article.url %>"><%= article.title %></a> <span class="date"><%= article.date.strftime('%b %e') %></span>
+            </h4>
+          </li>
+        <% end %>
+      </ol>
+
+  </footer>
+<% end %>

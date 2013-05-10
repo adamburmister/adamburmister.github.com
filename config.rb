@@ -15,7 +15,7 @@ activate :blog do |blog|
   blog.permalink = ":year/:month/:day/:title"
   # blog.sources = "blog/:year-:month-:day-:title.html"
   # blog.taglink = "blog/tags/:tag.html"
-  blog.layout = "article_layout"
+  blog.layout = "article"
   # blog.summary_separator = /(READMORE)/
   # blog.summary_length = 250
   # blog.year_link = ":year.html"
@@ -89,8 +89,6 @@ activate :sprockets
 activate :syntax,
          :cssclass => 'highlight wide '
 
-#activate :favicon_maker
-
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'
@@ -113,6 +111,8 @@ configure :build do
   activate :automatic_image_sizes
 
   activate :directory_indexes
+
+  activate :favicon_maker
 
   # Enable cache buster
   # activate :cache_buster
