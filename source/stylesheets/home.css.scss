@@ -289,6 +289,11 @@ $card-size-full: 632px;
       @include backface-visibility(hidden);
       @include transition(all 0.3s linear);
 
+      .icon-search {
+        display: none;
+        margin-top: 120px;
+      }
+
       small {
         position: absolute;
         bottom: -100%;
@@ -307,6 +312,26 @@ $card-size-full: 632px;
       }
 
       &:hover {
+        .icon-search {
+          display: block;
+          -webkit-animation-name: bounceIn;
+          -webkit-animation-duration: .5s;
+          -webkit-animation-timing-function: ease;
+          -webkit-animation-fill-mode: forwards;
+          -moz-animation-name: bounceIn;
+          -moz-animation-duration: .5s;
+          -moz-animation-timing-function: ease;
+          -moz-animation-fill-mode: forwards;
+          -o-animation-name: bounceIn;
+          -o-animation-duration: .5s;
+          -o-animation-timing-function: ease;
+          -o-animation-fill-mode: forwards;
+          animation-name: bounceIn;
+          animation-duration: .5s;
+          animation-timing-function: ease;
+          animation-fill-mode: forwards;
+        }
+
         // background: transparentize($color-flog-orange, 0.3);
         @include opacity(1);
         small {
@@ -423,4 +448,65 @@ $card-size-full: 632px;
         }
       }
     }
+}
+
+/* bounceIn */
+@-webkit-keyframes bounceIn {
+  0% {
+      -webkit-transform: scale(.8);
+  }
+  50% {
+    -webkit-transform: scale(1.08);
+  }
+  80% {
+    -webkit-transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@-moz-keyframes bounceIn {
+  0% {
+      -moz-transform: scale(.8);
+  }
+  50% {
+    -moz-transform: scale(1.08);
+  }
+  80% {
+    -moz-transform: scale(0.95);
+  }
+  100% {
+    -moz-transform: scale(1);
+  }
+}
+
+@-o-keyframes bounceIn {
+  0% {
+      -o-transform: scale(.8);
+  }
+  50% {
+    -o-transform: scale(1.08);
+  }
+  80% {
+    -o-transform: scale(0.95);
+  }
+  100% {
+    -o-transform: scale(1);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+      transform: scale(.8);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  80% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
