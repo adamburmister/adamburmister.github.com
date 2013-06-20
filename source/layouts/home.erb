@@ -4,7 +4,7 @@
 
 <% wrap_layout :layout do %>
 <div id="wrapper">
-  <h2 class="bio">
+  <h2 class="bio animated fadeIn">
     <span lang="mi" class="inline-tip hint--top hint--rounded"
           data-hint="That's a Māori greeting, which us Kiwi's use as a friendly &quot;hello&quot;">Kia ora</span>,
     I'm Adam Burmister.
@@ -13,7 +13,7 @@
     I also run my own startups.
   </h2>
 
-  <div id="grid">
+  <div id="grid" class="animated bounceInUp">
     <div class="item xero">
       <div class="uc-container">
         <div class="uc-initial-content">
@@ -25,7 +25,7 @@
         </div>
         <div class="uc-final-content">
           <%= image_tag "home/xero/expanded.jpg", alt: "Xero's bank reconciliation screen", class: "full" %>
-          <div class="title">
+          <div class="title animated fadeInUpBig">
             <h4>Xero (application and homepage) <a href="http://www.xero.com" class="icon-link-ext"><span class="hidden">visit</span></a></h4>
             <h5>Senior frontend engineer</h5>
             <p>Xero is Webby Award winning Online Accounting Software.</p>
@@ -46,7 +46,7 @@
         </div>
         <div class="uc-final-content">
           <%= image_tag "home/bbc/expanded.jpg", alt: "The BBC Homepage", class: "full" %>
-          <div class="title">
+          <div class="title animated fadeInUpBig">
             <h4>BBC Homepage <a href="http://www.bbc.co.uk" class="icon-link-ext"><span class="hidden">visit</span></a></h4>
             <h5>Lead Developer</h5>
             <p>I was honoured to have the chance to work on the largest UK website.</p>
@@ -67,7 +67,7 @@
         </div>
         <div class="uc-final-content">
           <%= image_tag "home/backchat/expanded.jpg", alt: "BackChat.io", class: "full" %>
-          <div class="title">
+          <div class="title animated fadeInUpBig">
             <h4>BackChat.io</h4>
             <h5>Founder, Product Development &amp; Engineering</h5>
             <p>BackChat.io provides real-time message filtering as a service. Collect, filter, enhance and route messages from a wide range of real-time data sources.</p>
@@ -78,7 +78,7 @@
     </div>
 
     <div class="item">
-        <div class="uc-container">
+      <div class="uc-container">
         <div class="uc-initial-content">
           <%= image_tag "home/seneca/thumb.png", alt: "Seneca.io is beautiful board reporting" %>
           <div class="zoom">
@@ -88,7 +88,7 @@
         </div>
         <div class="uc-final-content">
           <%= image_tag "home/seneca/expanded.jpg", alt: "Seneca.io", class: "full" %>
-          <div class="title">
+          <div class="title animated fadeInUpBig">
             <h4>Seneca.io <a href="http://www.seneca.io" class="icon-link-ext"><span class="hidden">visit</span></a></h4>
             <h5>Founder and CTO</h5>
             <p>Beautifully simple board reporting for startups and their boards. The UI is built with AngularJS, powered by a Rails CORS JSON API.</p>
@@ -108,7 +108,7 @@
         </div>
         <div class="uc-final-content">
           <%= image_tag "home/ironruby/expanded.jpg", alt: "IronRuby in Action, front cover", class: "full" %>
-          <div class="title">
+          <div class="title animated fadeInUpBig">
             <h4>IronRuby in Action</h4>
             <h5>Co-author</h5>
             <p>I helped write a book on the Microsoft .NET Ruby dialect! Crazy, right?</p>
@@ -118,9 +118,11 @@
     </div>
 
     <div class="non-resizable item hireme">
-      <a href="mailto:adam@burmister.com?subject=We+should+do+something" title="Email me">
-        <%= image_tag "home/hire/thumb.png", alt: "Hire me" %>
-      </a>
+      <div>
+        <a href="mailto:adam@burmister.com?subject=We+should+do+something" title="Email me">
+          <%= image_tag "home/hire/thumb.png", alt: "Hire me" %>
+        </a>
+      </div>
     </div>
   </div>
 </div>
