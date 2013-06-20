@@ -3,43 +3,47 @@
 @import "susy";
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen /*and (min-device-width : 320px)*/ and (max-device-width : 480px) {
-  body {
-    // font-size: 12px;
-  }
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   #mobileNavBtn {
     display: block;
   }
+  header.page nav ul {
+    display: none;
+  }
 }
 
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 321px) {
-/* Styles */
-}
+// /* Smartphones (landscape) ----------- */
+// @media only screen and (min-width : 321px) {
+// /* Styles */
+// }
 
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 320px) {
-/* Styles */
-}
+// /* Smartphones (portrait) ----------- */
+// @media only screen and (max-width : 320px) {
+// /* Styles */
+// }
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-/* Styles */
+  body {
+    font-size: $base-font-size;
+  }
 }
 
-/* iPads (landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-/* Styles */
-}
+// /* iPads (landscape) ----------- */
+// @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+// /* Styles */
+// }
 
-/* iPads (portrait) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-/* Styles */
-}
+// /* iPads (portrait) ----------- */
+// @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+// /* Styles */
+// }
 
 /* Desktops and laptops ----------- */
 @media only screen and (min-width : 1224px) {
-/* Styles */
+  body {
+    font-size: $base-font-size;
+  }
 }
 
 /* Large screens ----------- */
@@ -49,17 +53,15 @@
 
 /* iPhone 4 ----------- */
 @media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
-/* Styles */
-}
-
-@include at-breakpoint(0 768px) {
-
+  body {
+    font-size: $base-font-size - 4px;
+  }
 }
 
 @include at-breakpoint(0 640px) {
-  body {
-    font-size: 14px;
-  }
+  // body {
+  //   font-size: 14px;
+  // }
   header.page {
     nav {
       padding-top: 1rem;
@@ -116,17 +118,5 @@
         }
       }
     }
-  }
-}
-
-@include at-breakpoint(0 320px) {
-  body {
-    font-size: 12px;
-  }
-  #mobileNavBtn {
-    display: block;
-  }
-  header.page nav ul {
-    display: none;
   }
 }
