@@ -5,10 +5,62 @@
   <id>http://www.flog.co.nz/</id>
   <link href="http://www.flog.co.nz/"/>
   <link href="http://www.flog.co.nz/feed.xml" rel="self"/>
-  <updated>2012-10-06T00:00:00Z</updated>
+  <updated>2013-07-08T07:37:00Z</updated>
   <author>
     <name>Adam Burmister, @adamburmister</name>
   </author>
+  <entry>
+    <title>Cancellation insurance</title>
+    <link rel="alternate" href="/2013/07/08/cancellation-insurance/"/>
+    <id>/2013/07/08/cancellation-insurance/</id>
+    <published>2013-07-08T07:37:00Z</published>
+    <updated>2013-07-08T07:37:00Z</updated>
+    <author>
+      <name>Adam Burmister, @adamburmister</name>
+    </author>
+    <summary type="html">&lt;p&gt;&lt;p class="lead"&gt;
+  I&amp;rsquo;m going to be late for my boat. I&amp;rsquo;ve been waiting for this bus for about an hour; there should have been 2 to have gone by us by now.
+  &lt;br&gt;&lt;br&gt;
+  Still, the view out over the Agean sea is amazing, and how much can you expect of the Santorini bus system anyhow?&lt;/p&gt;
+</summary>
+    <content type="html">&lt;p class="lead"&gt;
+  I&amp;rsquo;m going to be late for my boat. I&amp;rsquo;ve been waiting for this bus for about an hour; there should have been 2 to have gone by us by now.
+  &lt;br&gt;&lt;br&gt;
+  Still, the view out over the Agean sea is amazing, and how much can you expect of the Santorini bus system anyhow?
+&lt;/p&gt;
+
+&lt;p&gt;As I sit in the hot Greek summer sunshine my mind wanders to startups, and tries to tie this experience back to my own work on &lt;a href="http://www.seneca.io"&gt;Seneca.io (smart SaaS board reporting)&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;As I see it there are a number of issues here:
+1. I&amp;rsquo;ve expected too much from the service
+2. I&amp;rsquo;ve over invested. I could have walked to Fira twice by now. Each minute more I wait I raise the chances that I&amp;rsquo;ll miss my boat
+3. A few taxi&amp;rsquo;s have passed by aleady - but they&amp;rsquo;re expensive for the distance I need to cover to the port.&lt;/p&gt;
+
+&lt;h1&gt;Lessons for startup marketeers&lt;/h1&gt;
+
+&lt;p&gt;Right now my mind is tieing this all back to marketing. Remember: You are not your feature set. &lt;/p&gt;
+
+&lt;p&gt;I read this great quote the other week, which goes:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;People don&amp;rsquo;t want a quarter-inch drill, they want a quarter-inch hole.&amp;rdquo;
+&lt;cite&gt;Dr. Theodore Levitt, Harvard Business School&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I need to get to the port so I can catch my ferry back to Athens. Obviously the bus is the cheapest way to reasonably do this (walking is almost impossible given the cliffs).&lt;/p&gt;
+
+&lt;p&gt;A bus will cost me about 4EUR, which is a reasonably good deal. A taxi, on the other hand, is 5x as expensive, and will cost me 20EUR.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s tempting to think of that 20EUR as me paying to hire a driver, his car and petrol, to drive me the ~10km distance to the port. But to me the customer, right now, standing in a hot bus shelter for the bus that never comes, that&amp;rsquo;s selling it short.&lt;/p&gt;
+
+&lt;p&gt;That 20EUR is really my cancellation insurance. It&amp;rsquo;s a 16EUR premium over the bus - which may never come -  to get me to the port, so I can catch my pre-paid 50EUR ferry back to Athens, so I can check into my hotel, and catch tomorrows £100 flight back to London.
+And instead of sweating it out in a hot bus stop, I can sit under an umbrella with a cold Mythos beer, relaxed and browsing HN.&lt;/p&gt;
+
+&lt;p&gt;And that&amp;rsquo;s money well spent.&lt;/p&gt;
+
+&lt;p&gt;So remember: you&amp;rsquo;re selling the hole, not the drill.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>New Beginnings</title>
     <link rel="alternate" href="/2012/10/06/new-beginnings/"/>
