@@ -97,7 +97,7 @@ p {
     // margin-bottom: 3rem;
     // font-family: $base-font-family;
 
-    &:first-child:first-letter {
+    &:first-letter {
       //@include pull(1);
       float: left;
       // text-align: right;
@@ -108,9 +108,11 @@ p {
       font-weight: bold;
       font-size: 5rem;
       // font-style: italic;
-      line-height: 1.1;
-      //margin-bottom: -0.1em;
-      padding-right: 0.2rem;
+      line-height: 1;
+      margin-bottom: -0.3em;
+      padding-top: 0.2rem;
+      padding-right: 0.3rem;
+      //background: red;
       @include text-shadow(0 1px 0 #fff);
     }
   }

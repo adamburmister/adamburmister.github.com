@@ -1,1 +1,1 @@
-rvm use ruby-1.9.3-p327-perf@adamburmister-github
+rvm use 2.0.0@adamburmister-github

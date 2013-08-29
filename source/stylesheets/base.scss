@@ -82,11 +82,12 @@ ol, ul {
   position: absolute;
   top: 0;
   right: 0;
-  margin: 0;
-  font-size: 32px;
-  padding: 8px;
-  text-decoration: none;
-  color: $color-flog-orange;
+  margin-top: 0.5rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 // Anchors

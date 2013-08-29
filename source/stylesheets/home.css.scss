@@ -1,4 +1,5 @@
 @import "compass";
+@import "compass/css3/transition";
 @import "susy";
 @import "variables";
 @import "lib/flip-card";
@@ -61,6 +62,10 @@ $card-size-full: 632px;
     margin: 0 1rem 2em 1rem;
     padding: 0;
     color: $color-body-text;
+    -webkit-animation-delay: 200ms;
+    -moz-animation-delay: 200ms;
+    -o-animation-delay: 200ms;
+    animation-delay: 200ms;
 
     @include at-breakpoint(0 40rem) {
       font-size: 1.7rem;
@@ -76,7 +81,7 @@ $card-size-full: 632px;
   margin: 0 0.5em 0.5em 0;
   width: $card-size-thumb;
   height: $card-size-thumb;
-  overflow: visible !important;
+  overflow: hidden !important;
 
   &.active {
     z-index: 100;
@@ -259,6 +264,13 @@ $card-size-full: 632px;
 }
 
 #grid {
+  &.bounceInUp {
+    -webkit-animation-delay: 800ms;
+    -moz-animation-delay: 800ms;
+    -o-animation-delay: 800ms;
+    animation-delay: 800ms;
+  }
+
     .uc-initial-content {
         background: darken($color-flog-lightgray, 5%);
     }
