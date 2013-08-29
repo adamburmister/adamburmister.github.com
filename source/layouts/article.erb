@@ -3,7 +3,7 @@
 
     <% if current_article %>
     <header class="hero">
-      <h2><%= current_article.title %></h2>
+      <h2 class="ruled"><%= current_article.title %></h2>
       <time><%= current_article.date.strftime "%d %B, %Y" %></time>
     </header>
     <% end %>

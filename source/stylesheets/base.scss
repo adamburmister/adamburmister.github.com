@@ -259,6 +259,15 @@ header.page {
           }
         }
 
+        &.header-nav__link__icon {
+          a {
+            padding: 0 1rem;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+
         &:last-child a {
           padding: 0 1rem;
         }
