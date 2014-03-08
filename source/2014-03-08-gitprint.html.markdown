@@ -1,0 +1,18 @@
+---
+title: Easily print Github markdown with <a href="https://gitprint.com">gitprint.com</a>
+date: 2014-03-08 12:24 -08:00
+tags:
+---
+
+<p class="lead">
+  Ever tried printing from Github? (What's all that Github page crap around your content?)
+  Now, <a href="https://gitprint.com">gitprint.com</a> makes it easy to print github markdown with one simple URL change.
+</p>
+
+Simply view any markdown file on Github, then in your URL bar replace the github.com part of the URL with gitprint.com — your markdown file will be rendered to a beautiful, printable PDF.
+
+It works for any blob file view (that's a URL with `blog/master` in it) as well as root-repo README.md files (there's still afew more smarts that need to be added to detect other filenames).
+
+Try it for yourself with the jQuery `README.md` 
+
+<a href="https://gitprint.com/jquery/jquery/blob/master/README.md">https://gitprint.com/jquery/jquery/blob/master/README.md</a>
